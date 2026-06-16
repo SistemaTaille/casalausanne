@@ -273,8 +273,8 @@ function Index() {
           <div className="mt-20 grid gap-12 border-t border-background/20 pt-16 md:grid-cols-3">
             <div>
               <p className="kicker text-background/50">WhatsApp</p>
-              <a href="#" className="mt-4 block font-display text-2xl transition hover:text-background/70 md:text-3xl">
-                Em breve
+              <a href="https://wa.me/5551999043287" target="_blank" rel="noopener noreferrer" className="mt-4 block font-display text-2xl transition hover:text-background/70 md:text-3xl">
+                (51) 99904-3287
               </a>
             </div>
             <div>
