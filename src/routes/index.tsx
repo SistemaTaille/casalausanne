@@ -43,6 +43,19 @@ const gallery = [
   { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea com brises de madeira" },
 ];
 
+const interiores = [
+  { src: int0085.url, label: "Living Social", caption: "Lareira em mármore travertino e pé-direito duplo" },
+  { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
+  { src: int0079.url, label: "Sala de Jantar", caption: "Mesa em madeira maciça com vista para a piscina" },
+  { src: int0089.url, label: "Jantar — Anoitecer", caption: "Pendente escultural e parede em mármore" },
+  { src: int0084.url, label: "Cozinha Gourmet", caption: "Ilha em mármore com bancada estendida para refeições" },
+  { src: int0078.url, label: "Cozinha — Detalhe", caption: "Marcenaria em carvalho e eletrodomésticos premium" },
+  { src: int0074.url, label: "Bancada de Refeições", caption: "Iluminação cênica e marcenaria ripada" },
+  { src: int0086.url, label: "Cozinha Integrada", caption: "Vista para piscina e área externa" },
+  { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
+  { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
+];
+
 const fichaTecnica = [
   { label: "Área Construída", value: "292", unit: "m²" },
   { label: "Área do Terreno", value: "600", unit: "m²" },
