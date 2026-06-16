@@ -16,6 +16,16 @@ import int0085 from "@/assets/interior-0085.jpg.asset.json";
 import int0086 from "@/assets/interior-0086.jpg.asset.json";
 import int0087 from "@/assets/interior-0087.jpg.asset.json";
 import int0089 from "@/assets/interior-0089.jpg.asset.json";
+import extEntardecer from "@/assets/ext-entardecer.jpg.asset.json";
+import extFrontalDia from "@/assets/ext-frontal-dia.jpg.asset.json";
+import extFrontalNoite from "@/assets/ext-frontal-noite.jpg.asset.json";
+import extFundosNoite from "@/assets/ext-fundos-noite.jpg.asset.json";
+import extGaragemDia from "@/assets/ext-garagem-dia.jpg.asset.json";
+import extLateralJardim from "@/assets/ext-lateral-jardim.jpg.asset.json";
+import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
+import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
+import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
+import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -54,6 +64,19 @@ const interiores = [
   { src: int0086.url, label: "Cozinha Integrada", caption: "Vista para piscina e área externa" },
   { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
   { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
+];
+
+const exteriores = [
+  { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "Beirais profundos, painéis em madeira e fachada em vidro" },
+  { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "Cobertura em laje, brises ripados e átrio envidraçado" },
+  { src: extFrontalNoite.url, label: "Fachada Frontal — Noite", caption: "Iluminação cênica integrada à arquitetura" },
+  { src: extFundosNoite.url, label: "Fundos — Anoitecer", caption: "Pedra natural, piscina iluminada e jardim tropical" },
+  { src: extGaragemDia.url, label: "Acesso e Garagem", caption: "Pé-direito generoso e marcenaria em madeira no teto" },
+  { src: extLateralJardim.url, label: "Lateral — Jardim", caption: "Volumes em concreto sobre o gramado e mata nativa" },
+  { src: extLateralMadeira.url, label: "Lateral — Painel em Madeira", caption: "Brises ripados e jardineiras suspensas" },
+  { src: extVolumetriaChamine.url, label: "Volumetria — Chaminé", caption: "Geometria contemporânea com janelas em fita" },
+  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "Pastilhas verdes, deck em madeira e pergolado estrutural" },
+  { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
 ];
 
 const fichaTecnica = [
@@ -233,6 +256,34 @@ function Index() {
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
               {interiores.map((img) => (
+                <figure key={img.src} className="group">
+                  <div className="overflow-hidden">
+                    <img
+                      src={img.src}
+                      alt={img.label}
+                      loading="lazy"
+                      className="aspect-[16/10] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+                    <span className="kicker text-muted-foreground">{img.label}</span>
+                    <span className="text-right text-sm font-light italic text-muted-foreground">{img.caption}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          {/* Exteriores — arquitetura e área externa */}
+          <div className="mt-24 border-t border-border/60 pt-16 md:mt-32 md:pt-20">
+            <div className="mb-12 flex items-end justify-between gap-8">
+              <h3 className="font-display text-3xl md:text-4xl">
+                Exteriores <em className="italic text-muted-foreground">— arquitetura</em>
+              </h3>
+              <p className="hidden text-sm text-muted-foreground md:block">{exteriores.length} imagens</p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+              {exteriores.map((img) => (
                 <figure key={img.src} className="group">
                   <div className="overflow-hidden">
                     <img
