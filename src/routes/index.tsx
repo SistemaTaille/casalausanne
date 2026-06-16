@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import fachadaPrincipal from "@/assets/fachada-principal.jpg.asset.json";
 import fachadaFrente from "@/assets/fachada-frente.jpg.asset.json";
 import fachadaLateral from "@/assets/fachada-lateral.jpg.asset.json";
 import fundosDia from "@/assets/fundos-dia.jpg.asset.json";
@@ -14,9 +15,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Casa Laussane — Condomínio Serra Azul" },
       { property: "og:description", content: "Residência contemporânea de alto padrão. 292 m² construídos, 3 suítes, piscina, automação." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: fundosDia.url },
+      { property: "og:image", content: fachadaPrincipal.url },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: fundosDia.url },
+      { name: "twitter:image", content: fachadaPrincipal.url },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -24,6 +25,7 @@ export const Route = createFileRoute("/")({
 });
 
 const gallery = [
+  { src: fachadaPrincipal.url, label: "Fachada Principal", caption: "Volumetria contemporânea com brises de madeira e vidros de chão ao teto" },
   { src: fundosDia.url, label: "Fachada Posterior", caption: "Integração com o jardim e área de piscina" },
   { src: living.url, label: "Living Pé-direito Duplo", caption: "Lareira em mármore e vidros de chão ao teto" },
   { src: fachadaFrente.url, label: "Acesso Principal", caption: "Pórtico em concreto e madeira" },
@@ -84,7 +86,7 @@ function Index() {
 
       {/* Hero */}
       <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden">
-        <img src={fundosDia.url} alt="Casa Laussane — vista posterior com piscina" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={fachadaPrincipal.url} alt="Casa Laussane — fachada principal" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
           <p className="kicker mb-6 text-white/85">Condomínio Serra Azul · Residência 01</p>
