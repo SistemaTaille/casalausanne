@@ -16,6 +16,16 @@ import int0085 from "@/assets/interior-0085.jpg.asset.json";
 import int0086 from "@/assets/interior-0086.jpg.asset.json";
 import int0087 from "@/assets/interior-0087.jpg.asset.json";
 import int0089 from "@/assets/interior-0089.jpg.asset.json";
+import extEntardecer from "@/assets/ext-entardecer.jpg.asset.json";
+import extFrontalDia from "@/assets/ext-frontal-dia.jpg.asset.json";
+import extFrontalNoite from "@/assets/ext-frontal-noite.jpg.asset.json";
+import extFundosNoite from "@/assets/ext-fundos-noite.jpg.asset.json";
+import extGaragemDia from "@/assets/ext-garagem-dia.jpg.asset.json";
+import extLateralJardim from "@/assets/ext-lateral-jardim.jpg.asset.json";
+import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
+import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
+import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
+import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
