@@ -6,6 +6,16 @@ import fachadaLateral from "@/assets/fachada-lateral.jpg.asset.json";
 import fundosDia from "@/assets/fundos-dia.jpg.asset.json";
 import living from "@/assets/living.jpg.asset.json";
 import piscinaNoite from "@/assets/piscina-noite.jpg.asset.json";
+import int0070 from "@/assets/interior-0070.jpg.asset.json";
+import int0074 from "@/assets/interior-0074.jpg.asset.json";
+import int0075 from "@/assets/interior-0075.jpg.asset.json";
+import int0078 from "@/assets/interior-0078.jpg.asset.json";
+import int0079 from "@/assets/interior-0079.jpg.asset.json";
+import int0084 from "@/assets/interior-0084.jpg.asset.json";
+import int0085 from "@/assets/interior-0085.jpg.asset.json";
+import int0086 from "@/assets/interior-0086.jpg.asset.json";
+import int0087 from "@/assets/interior-0087.jpg.asset.json";
+import int0089 from "@/assets/interior-0089.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
