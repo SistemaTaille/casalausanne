@@ -222,6 +222,35 @@ function Index() {
               </figcaption>
             </figure>
           </div>
+
+          {/* Interiores — grid expandido */}
+          <div className="mt-24 border-t border-border/60 pt-16 md:mt-32 md:pt-20">
+            <div className="mb-12 flex items-end justify-between gap-8">
+              <h3 className="font-display text-3xl md:text-4xl">
+                Interiores <em className="italic text-muted-foreground">— ambientes</em>
+              </h3>
+              <p className="hidden text-sm text-muted-foreground md:block">{interiores.length} imagens</p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+              {interiores.map((img) => (
+                <figure key={img.src} className="group">
+                  <div className="overflow-hidden">
+                    <img
+                      src={img.src}
+                      alt={img.label}
+                      loading="lazy"
+                      className="aspect-[16/10] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+                    <span className="kicker text-muted-foreground">{img.label}</span>
+                    <span className="text-right text-sm font-light italic text-muted-foreground">{img.caption}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </div>
         </div>
       </section>
 
