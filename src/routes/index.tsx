@@ -6,6 +6,16 @@ import fachadaLateral from "@/assets/fachada-lateral.jpg.asset.json";
 import fundosDia from "@/assets/fundos-dia.jpg.asset.json";
 import living from "@/assets/living.jpg.asset.json";
 import piscinaNoite from "@/assets/piscina-noite.jpg.asset.json";
+import int0070 from "@/assets/interior-0070.jpg.asset.json";
+import int0074 from "@/assets/interior-0074.jpg.asset.json";
+import int0075 from "@/assets/interior-0075.jpg.asset.json";
+import int0078 from "@/assets/interior-0078.jpg.asset.json";
+import int0079 from "@/assets/interior-0079.jpg.asset.json";
+import int0084 from "@/assets/interior-0084.jpg.asset.json";
+import int0085 from "@/assets/interior-0085.jpg.asset.json";
+import int0086 from "@/assets/interior-0086.jpg.asset.json";
+import int0087 from "@/assets/interior-0087.jpg.asset.json";
+import int0089 from "@/assets/interior-0089.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,6 +41,19 @@ const gallery = [
   { src: fachadaFrente.url, label: "Acesso Principal", caption: "Pórtico em concreto e madeira" },
   { src: piscinaNoite.url, label: "Piscina — Anoitecer", caption: "Iluminação cênica e revestimento em pastilhas" },
   { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea com brises de madeira" },
+];
+
+const interiores = [
+  { src: int0085.url, label: "Living Social", caption: "Lareira em mármore travertino e pé-direito duplo" },
+  { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
+  { src: int0079.url, label: "Sala de Jantar", caption: "Mesa em madeira maciça com vista para a piscina" },
+  { src: int0089.url, label: "Jantar — Anoitecer", caption: "Pendente escultural e parede em mármore" },
+  { src: int0084.url, label: "Cozinha Gourmet", caption: "Ilha em mármore com bancada estendida para refeições" },
+  { src: int0078.url, label: "Cozinha — Detalhe", caption: "Marcenaria em carvalho e eletrodomésticos premium" },
+  { src: int0074.url, label: "Bancada de Refeições", caption: "Iluminação cênica e marcenaria ripada" },
+  { src: int0086.url, label: "Cozinha Integrada", caption: "Vista para piscina e área externa" },
+  { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
+  { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
 ];
 
 const fichaTecnica = [
@@ -198,6 +221,34 @@ function Index() {
                 <span className="text-sm font-light italic text-muted-foreground">{gallery[4].caption}</span>
               </figcaption>
             </figure>
+          </div>
+
+          {/* Interiores — grid expandido */}
+          <div className="mt-24 border-t border-border/60 pt-16 md:mt-32 md:pt-20">
+            <div className="mb-12 flex items-end justify-between gap-8">
+              <h3 className="font-display text-3xl md:text-4xl">
+                Interiores <em className="italic text-muted-foreground">— ambientes</em>
+              </h3>
+              <p className="hidden text-sm text-muted-foreground md:block">{interiores.length} imagens</p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+              {interiores.map((img) => (
+                <figure key={img.src} className="group">
+                  <div className="overflow-hidden">
+                    <img
+                      src={img.src}
+                      alt={img.label}
+                      loading="lazy"
+                      className="aspect-[16/10] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+                    <span className="kicker text-muted-foreground">{img.label}</span>
+                    <span className="text-right text-sm font-light italic text-muted-foreground">{img.caption}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
