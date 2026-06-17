@@ -160,7 +160,7 @@ function Index() {
         <img src={fachadaPrincipal.url} alt="Casa Laussane — fachada principal" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
-          <p className="kicker mb-6 text-white/85">Condomínio Serra Azul · Residência 01</p>
+          <p className="kicker mb-6 text-sm text-white tracking-[0.22em] font-medium">Condomínio Serra Azul</p>
           <h1 className="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.95] text-white">
             Casa<br />
             <em className="not-italic font-normal italic">Laussane</em>
