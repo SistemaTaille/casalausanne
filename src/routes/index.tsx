@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import fachadaPrincipal from "@/assets/fachada-principal.jpg.asset.json";
 import fachadaFrente from "@/assets/fachada-frente.jpg.asset.json";
 import fachadaLateral from "@/assets/fachada-lateral.jpg.asset.json";
@@ -195,25 +196,7 @@ function Index() {
             </p>
           </div>
 
-          {/* Galeria grid lado a lado */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
-            {gallery.map((img) => (
-              <figure key={img.src} className="group">
-                <div className="overflow-hidden">
-                  <img
-                    src={img.src}
-                    alt={img.label}
-                    loading="lazy"
-                    className="aspect-[4/3] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <figcaption className="mt-4">
-                  <span className="kicker text-muted-foreground">{img.label}</span>
-                  <p className="mt-1 text-sm font-light italic text-muted-foreground">{img.caption}</p>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <ImageCarousel images={gallery} />
 
           {/* Interiores — grid expandido */}
           <div className="mt-24 border-t border-border/60 pt-16 md:mt-32 md:pt-20">
