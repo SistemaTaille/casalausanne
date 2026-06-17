@@ -52,17 +52,25 @@ const gallery = [
   { src: fachadaFrente.url, label: "Acesso Principal", caption: "Pórtico em concreto e madeira" },
   { src: piscinaNoite.url, label: "Piscina — Anoitecer", caption: "Iluminação cênica e revestimento em pastilhas" },
   { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea com brises de madeira" },
-];
-
-const interiores = [
-  { src: int0085.url, label: "Living Social", caption: "Lareira em mármore travertino e pé-direito duplo" },
-  { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
+  // Interiores adicionais
   { src: int0079.url, label: "Sala de Jantar", caption: "Mesa em madeira maciça com vista para a piscina" },
   { src: int0089.url, label: "Jantar — Anoitecer", caption: "Pendente escultural e parede em mármore" },
   { src: int0084.url, label: "Cozinha Gourmet", caption: "Ilha em mármore com bancada estendida para refeições" },
   { src: int0078.url, label: "Cozinha — Detalhe", caption: "Marcenaria em carvalho e eletrodomésticos premium" },
   { src: int0074.url, label: "Bancada de Refeições", caption: "Iluminação cênica e marcenaria ripada" },
   { src: int0086.url, label: "Cozinha Integrada", caption: "Vista para piscina e área externa" },
+  // Exteriores adicionais
+  { src: extFrontalNoite.url, label: "Fachada Frontal — Noite", caption: "Iluminação cênica integrada à arquitetura" },
+  { src: extFundosNoite.url, label: "Fundos — Anoitecer", caption: "Pedra natural, piscina iluminada e jardim tropical" },
+  { src: extGaragemDia.url, label: "Acesso e Garagem", caption: "Pé-direito generoso e marcenaria em madeira no teto" },
+  { src: extLateralJardim.url, label: "Lateral — Jardim", caption: "Volumes em concreto sobre o gramado e mata nativa" },
+  { src: extLateralMadeira.url, label: "Lateral — Painel em Madeira", caption: "Brises ripados e jardineiras suspensas" },
+  { src: extVolumetriaChamine.url, label: "Volumetria — Chaminé", caption: "Geometria contemporânea com janelas em fita" },
+];
+
+const interiores = [
+  { src: int0085.url, label: "Living Social", caption: "Lareira em mármore travertino e pé-direito duplo" },
+  { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
   { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
   { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
 ];
@@ -70,12 +78,6 @@ const interiores = [
 const exteriores = [
   { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "Beirais profundos, painéis em madeira e fachada em vidro" },
   { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "Cobertura em laje, brises ripados e átrio envidraçado" },
-  { src: extFrontalNoite.url, label: "Fachada Frontal — Noite", caption: "Iluminação cênica integrada à arquitetura" },
-  { src: extFundosNoite.url, label: "Fundos — Anoitecer", caption: "Pedra natural, piscina iluminada e jardim tropical" },
-  { src: extGaragemDia.url, label: "Acesso e Garagem", caption: "Pé-direito generoso e marcenaria em madeira no teto" },
-  { src: extLateralJardim.url, label: "Lateral — Jardim", caption: "Volumes em concreto sobre o gramado e mata nativa" },
-  { src: extLateralMadeira.url, label: "Lateral — Painel em Madeira", caption: "Brises ripados e jardineiras suspensas" },
-  { src: extVolumetriaChamine.url, label: "Volumetria — Chaminé", caption: "Geometria contemporânea com janelas em fita" },
   { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "Pastilhas verdes, deck em madeira e pergolado estrutural" },
   { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
 ];
