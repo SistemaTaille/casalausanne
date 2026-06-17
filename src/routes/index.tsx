@@ -27,6 +27,13 @@ import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
 import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
 import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
 import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
+import plantaTerreo from "@/assets/planta-terreo.jpg.asset.json";
+import plantaSuperior from "@/assets/planta-superior.jpg.asset.json";
+
+const plantas = [
+  { src: plantaTerreo.url, label: "Pavimento Térreo", caption: "Living, cozinha gourmet, área de piscina e garagem" },
+  { src: plantaSuperior.url, label: "Pavimento Superior", caption: "Três suítes amplas com varandas e closets" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -98,11 +105,22 @@ const diferenciais = [
 
 function Index() {
   const [scrolled, setScrolled] = useState(false);
+  const [lightbox, setLightbox] = useState<{ src: string; label: string } | null>(null);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(null); };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [lightbox]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -118,6 +136,7 @@ function Index() {
             {[
               ["O Imóvel", "imovel"],
               ["Galeria", "galeria"],
+              ["Plantas", "plantas"],
               ["Diferenciais", "diferenciais"],
               ["Localização", "localizacao"],
               ["Contato", "contato"],
