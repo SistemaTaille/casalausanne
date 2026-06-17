@@ -413,6 +413,37 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] flex flex-col bg-black/95 backdrop-blur-sm"
+          onClick={() => setLightbox(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.label}
+        >
+          <div className="flex items-center justify-between px-6 py-5 md:px-10">
+            <span className="kicker text-white/80">{lightbox.label}</span>
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
+              className="kicker border-b border-white/60 pb-0.5 text-white/90 transition hover:text-white"
+              aria-label="Fechar"
+            >
+              Fechar ✕
+            </button>
+          </div>
+          <div className="flex flex-1 items-center justify-center overflow-auto p-4 md:p-10">
+            <img
+              src={lightbox.src}
+              alt={lightbox.label}
+              onClick={(e) => e.stopPropagation()}
+              className="max-h-full max-w-full cursor-zoom-out bg-white object-contain"
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 }
