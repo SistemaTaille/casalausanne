@@ -39,9 +39,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Casa Laussane — Condomínio Serra Azul" },
-      { name: "description", content: "Residência contemporânea de alto padrão no Condomínio Serra Azul. 292 m² construídos, 3 suítes, piscina, automação e piso aquecido." },
+      { name: "description", content: "Residência contemporânea de alto padrão no Condomínio Serra Azul. 290,98 m² construídos, 3 suítes, piscina, automação e piso aquecido." },
       { property: "og:title", content: "Casa Laussane — Condomínio Serra Azul" },
-      { property: "og:description", content: "Residência contemporânea de alto padrão. 292 m² construídos, 3 suítes, piscina, automação." },
+      { property: "og:description", content: "Residência contemporânea de alto padrão. 290,98 m² construídos, 3 suítes, piscina, automação." },
       { property: "og:type", content: "website" },
       { property: "og:image", content: fachadaPrincipal.url },
       { name: "twitter:card", content: "summary_large_image" },
@@ -90,8 +90,9 @@ const exteriores = [
 ];
 
 const fichaTecnica = [
-  { label: "Área Construída", value: "292", unit: "m²" },
-  { label: "Área do Terreno", value: "600", unit: "m²" },
+  { label: "Área Construída", value: "290,98", unit: "m²" },
+  { label: "Área do Terreno", value: "597,60", unit: "m²" },
+  { label: "Área Equivalente", value: "330,00", unit: "m²" },
   { label: "Suítes", value: "03", unit: "" },
   { label: "Vagas", value: "02", unit: "" },
 ];
@@ -186,9 +187,9 @@ function Index() {
               Uma residência pensada para quem busca <em className="italic">privacidade, conforto e desenho</em> em cada detalhe.
             </h2>
             <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-              A Casa Laussane se ergue em meio à mata nativa do Condomínio Serra Azul. São 292 m² de construção
-              distribuídos em dois pavimentos, com pé-direito duplo no living, três suítes amplas e integração
-              total entre os ambientes sociais e a área externa com piscina.
+              A Casa Laussane se ergue em meio à natureza do Condomínio Serra Azul. São 290,98 m² de construção
+              distribuídos em dois pavimentos, com pé-direito duplo no living, três suítes amplas, escritório e
+              integração total entre os ambientes sociais e a área externa com piscina.
             </p>
 
             <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
