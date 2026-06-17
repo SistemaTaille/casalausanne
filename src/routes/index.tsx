@@ -314,7 +314,7 @@ function Index() {
                     src={p.src}
                     alt={p.label}
                     loading="lazy"
-                    className="aspect-[16/10] w-full object-contain p-1 transition duration-700 group-hover:scale-[1.02]"
+                    className="w-full h-auto object-contain transition duration-700 group-hover:scale-[1.02]"
                   />
                 </button>
                 <figcaption className="mt-4 flex items-baseline justify-between gap-4">
