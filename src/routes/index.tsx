@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import fachadaPrincipal from "@/assets/fachada-principal.jpg.asset.json";
 import fachadaFrente from "@/assets/fachada-frente.jpg.asset.json";
 import fachadaLateral from "@/assets/fachada-lateral.jpg.asset.json";
