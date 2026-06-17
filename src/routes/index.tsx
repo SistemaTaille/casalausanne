@@ -135,6 +135,8 @@ function Index() {
           <nav className="hidden gap-10 md:flex">
             {[
               ["O Imóvel", "imovel"],
+              ["Exteriores", "exteriores"],
+              ["Interiores", "interiores"],
               ["Galeria", "galeria"],
               ["Plantas", "plantas"],
               ["Diferenciais", "diferenciais"],
@@ -204,12 +206,78 @@ function Index() {
         </div>
       </section>
 
+      {/* Exteriores */}
+      <section id="exteriores" className="border-b border-border bg-secondary/40">
+        <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
+          <div className="mb-12 flex items-end justify-between gap-8">
+            <div>
+              <p className="kicker text-muted-foreground">02 — Exteriores</p>
+              <h2 className="mt-6 font-display text-4xl md:text-6xl">
+                Arquitetura <em className="italic text-muted-foreground">— arquitetura</em>
+              </h2>
+            </div>
+            <p className="hidden text-sm text-muted-foreground md:block">{exteriores.length} imagens</p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+            {exteriores.map((img) => (
+              <figure key={img.src} className="group">
+                <div className="overflow-hidden">
+                  <img
+                    src={img.src}
+                    alt={img.label}
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+                  <span className="kicker text-muted-foreground">{img.label}</span>
+                  <span className="text-right text-sm font-light italic text-muted-foreground">{img.caption}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Interiores */}
+      <section id="interiores" className="border-b border-border">
+        <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
+          <div className="mb-12 flex items-end justify-between gap-8">
+            <div>
+              <p className="kicker text-muted-foreground">03 — Interiores</p>
+              <h2 className="mt-6 font-display text-4xl md:text-6xl">
+                Ambientes <em className="italic text-muted-foreground">— ambientes</em>
+              </h2>
+            </div>
+            <p className="hidden text-sm text-muted-foreground md:block">{interiores.length} imagens</p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+            {interiores.map((img) => (
+              <figure key={img.src} className="group">
+                <div className="overflow-hidden">
+                  <img
+                    src={img.src}
+                    alt={img.label}
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+                  <span className="kicker text-muted-foreground">{img.label}</span>
+                  <span className="text-right text-sm font-light italic text-muted-foreground">{img.caption}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Galeria */}
       <section id="galeria" className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-20 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">02 — Galeria</p>
+              <p className="kicker text-muted-foreground">04 — Galeria</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">Os ambientes</h2>
             </div>
             <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
@@ -218,62 +286,6 @@ function Index() {
           </div>
 
           <ImageCarousel images={gallery} />
-
-          {/* Interiores — grid expandido */}
-          <div className="mt-24 border-t border-border/60 pt-16 md:mt-32 md:pt-20">
-            <div className="mb-12 flex items-end justify-between gap-8">
-              <h3 className="font-display text-3xl md:text-4xl">
-                Interiores <em className="italic text-muted-foreground">— ambientes</em>
-              </h3>
-              <p className="hidden text-sm text-muted-foreground md:block">{interiores.length} imagens</p>
-            </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-              {interiores.map((img) => (
-                <figure key={img.src} className="group">
-                  <div className="overflow-hidden">
-                    <img
-                      src={img.src}
-                      alt={img.label}
-                      loading="lazy"
-                      className="aspect-[16/10] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
-                    />
-                  </div>
-                  <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-                    <span className="kicker text-muted-foreground">{img.label}</span>
-                    <span className="text-right text-sm font-light italic text-muted-foreground">{img.caption}</span>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-
-          {/* Exteriores — arquitetura e área externa */}
-          <div className="mt-24 border-t border-border/60 pt-16 md:mt-32 md:pt-20">
-            <div className="mb-12 flex items-end justify-between gap-8">
-              <h3 className="font-display text-3xl md:text-4xl">
-                Exteriores <em className="italic text-muted-foreground">— arquitetura</em>
-              </h3>
-              <p className="hidden text-sm text-muted-foreground md:block">{exteriores.length} imagens</p>
-            </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-              {exteriores.map((img) => (
-                <figure key={img.src} className="group">
-                  <div className="overflow-hidden">
-                    <img
-                      src={img.src}
-                      alt={img.label}
-                      loading="lazy"
-                      className="aspect-[16/10] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
-                    />
-                  </div>
-                  <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-                    <span className="kicker text-muted-foreground">{img.label}</span>
-                    <span className="text-right text-sm font-light italic text-muted-foreground">{img.caption}</span>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -282,7 +294,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-16 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">03 — Plantas</p>
+              <p className="kicker text-muted-foreground">05 — Plantas</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">Plantas baixas</h2>
             </div>
             <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
@@ -295,14 +307,14 @@ function Index() {
                 <button
                   type="button"
                   onClick={() => setLightbox({ src: p.src, label: p.label })}
-                  className="block w-full cursor-zoom-in overflow-hidden bg-white"
+                  className="block w-full cursor-zoom-in overflow-hidden"
                   aria-label={`Ampliar ${p.label}`}
                 >
                   <img
                     src={p.src}
                     alt={p.label}
                     loading="lazy"
-                    className="aspect-[4/3] w-full object-contain p-4 transition duration-700 group-hover:scale-[1.02] md:p-8"
+                    className="aspect-[16/10] w-full object-contain p-1 transition duration-700 group-hover:scale-[1.02]"
                   />
                 </button>
                 <figcaption className="mt-4 flex items-baseline justify-between gap-4">
@@ -317,10 +329,9 @@ function Index() {
 
       {/* Diferenciais */}
       <section id="diferenciais" className="border-b border-border">
-
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-4">
-            <p className="kicker text-muted-foreground">03 — Diferenciais</p>
+            <p className="kicker text-muted-foreground">06 — Diferenciais</p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-5xl">
               O que faz a Laussane <em className="italic">única</em>.
             </h2>
@@ -345,7 +356,7 @@ function Index() {
       <section id="localizacao" className="border-b border-border bg-secondary/40">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-5">
-            <p className="kicker text-muted-foreground">04 — Localização</p>
+            <p className="kicker text-muted-foreground">07 — Localização</p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
               Condomínio<br /><em className="italic">Serra Azul</em>
             </h2>
@@ -377,7 +388,7 @@ function Index() {
       {/* Contato */}
       <section id="contato" className="bg-foreground text-background">
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
-          <p className="kicker text-background/60">05 — Contato</p>
+          <p className="kicker text-background/60">Contato</p>
           <h2 className="mt-8 max-w-4xl font-display text-5xl leading-[1.05] md:text-8xl">
             Conheça a Casa <em className="italic">Laussane</em> pessoalmente.
           </h2>
