@@ -27,6 +27,13 @@ import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
 import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
 import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
 import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
+import plantaTerreo from "@/assets/planta-terreo.jpg.asset.json";
+import plantaSuperior from "@/assets/planta-superior.jpg.asset.json";
+
+const plantas = [
+  { src: plantaTerreo.url, label: "Pavimento Térreo", caption: "Living, cozinha gourmet, área de piscina e garagem" },
+  { src: plantaSuperior.url, label: "Pavimento Superior", caption: "Três suítes amplas com varandas e closets" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -98,11 +105,22 @@ const diferenciais = [
 
 function Index() {
   const [scrolled, setScrolled] = useState(false);
+  const [lightbox, setLightbox] = useState<{ src: string; label: string } | null>(null);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(null); };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [lightbox]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -118,6 +136,7 @@ function Index() {
             {[
               ["O Imóvel", "imovel"],
               ["Galeria", "galeria"],
+              ["Plantas", "plantas"],
               ["Diferenciais", "diferenciais"],
               ["Localização", "localizacao"],
               ["Contato", "contato"],
@@ -258,8 +277,47 @@ function Index() {
         </div>
       </section>
 
+      {/* Plantas */}
+      <section id="plantas" className="border-b border-border">
+        <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
+          <div className="mb-16 flex items-end justify-between gap-8">
+            <div>
+              <p className="kicker text-muted-foreground">03 — Plantas</p>
+              <h2 className="mt-6 font-display text-4xl md:text-6xl">Plantas baixas</h2>
+            </div>
+            <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
+              Clique em cada planta para ampliar em tela cheia.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10">
+            {plantas.map((p) => (
+              <figure key={p.src} className="group">
+                <button
+                  type="button"
+                  onClick={() => setLightbox({ src: p.src, label: p.label })}
+                  className="block w-full cursor-zoom-in overflow-hidden bg-white"
+                  aria-label={`Ampliar ${p.label}`}
+                >
+                  <img
+                    src={p.src}
+                    alt={p.label}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-contain p-4 transition duration-700 group-hover:scale-[1.02] md:p-8"
+                  />
+                </button>
+                <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+                  <span className="kicker text-muted-foreground">{p.label}</span>
+                  <span className="text-right text-sm font-light italic text-muted-foreground">{p.caption}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Diferenciais */}
       <section id="diferenciais" className="border-b border-border">
+
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-4">
             <p className="kicker text-muted-foreground">03 — Diferenciais</p>
@@ -355,6 +413,37 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] flex flex-col bg-black/95 backdrop-blur-sm"
+          onClick={() => setLightbox(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.label}
+        >
+          <div className="flex items-center justify-between px-6 py-5 md:px-10">
+            <span className="kicker text-white/80">{lightbox.label}</span>
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
+              className="kicker border-b border-white/60 pb-0.5 text-white/90 transition hover:text-white"
+              aria-label="Fechar"
+            >
+              Fechar ✕
+            </button>
+          </div>
+          <div className="flex flex-1 items-center justify-center overflow-auto p-4 md:p-10">
+            <img
+              src={lightbox.src}
+              alt={lightbox.label}
+              onClick={(e) => e.stopPropagation()}
+              className="max-h-full max-w-full cursor-zoom-out bg-white object-contain"
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 }
