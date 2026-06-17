@@ -195,55 +195,24 @@ function Index() {
             </p>
           </div>
 
-          {/* Editorial grid */}
-          <div className="grid grid-cols-12 gap-6 md:gap-8">
-            <figure className="col-span-12 md:col-span-8">
-              <div className="overflow-hidden">
-                <img src={gallery[0].src} alt={gallery[0].label} className="aspect-[4/3] w-full object-cover transition duration-1000 hover:scale-[1.02]" />
-              </div>
-              <figcaption className="mt-4 flex items-baseline justify-between">
-                <span className="kicker text-muted-foreground">{gallery[0].label}</span>
-                <span className="text-sm font-light italic text-muted-foreground">{gallery[0].caption}</span>
-              </figcaption>
-            </figure>
-            <figure className="col-span-12 md:col-span-4 md:pt-24">
-              <div className="overflow-hidden">
-                <img src={gallery[1].src} alt={gallery[1].label} className="aspect-[3/4] w-full object-cover transition duration-1000 hover:scale-[1.02]" />
-              </div>
-              <figcaption className="mt-4">
-                <span className="kicker text-muted-foreground">{gallery[1].label}</span>
-                <p className="mt-1 text-sm font-light italic text-muted-foreground">{gallery[1].caption}</p>
-              </figcaption>
-            </figure>
-
-            <figure className="col-span-12 md:col-span-5 md:col-start-2">
-              <div className="overflow-hidden">
-                <img src={gallery[2].src} alt={gallery[2].label} className="aspect-[4/5] w-full object-cover transition duration-1000 hover:scale-[1.02]" />
-              </div>
-              <figcaption className="mt-4">
-                <span className="kicker text-muted-foreground">{gallery[2].label}</span>
-                <p className="mt-1 text-sm font-light italic text-muted-foreground">{gallery[2].caption}</p>
-              </figcaption>
-            </figure>
-            <figure className="col-span-12 md:col-span-6 md:col-start-7 md:pt-32">
-              <div className="overflow-hidden">
-                <img src={gallery[3].src} alt={gallery[3].label} className="aspect-[4/3] w-full object-cover transition duration-1000 hover:scale-[1.02]" />
-              </div>
-              <figcaption className="mt-4">
-                <span className="kicker text-muted-foreground">{gallery[3].label}</span>
-                <p className="mt-1 text-sm font-light italic text-muted-foreground">{gallery[3].caption}</p>
-              </figcaption>
-            </figure>
-
-            <figure className="col-span-12 md:col-span-10 md:col-start-2">
-              <div className="overflow-hidden">
-                <img src={gallery[4].src} alt={gallery[4].label} className="aspect-[16/9] w-full object-cover transition duration-1000 hover:scale-[1.02]" />
-              </div>
-              <figcaption className="mt-4 flex items-baseline justify-between">
-                <span className="kicker text-muted-foreground">{gallery[4].label}</span>
-                <span className="text-sm font-light italic text-muted-foreground">{gallery[4].caption}</span>
-              </figcaption>
-            </figure>
+          {/* Galeria grid lado a lado */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
+            {gallery.map((img) => (
+              <figure key={img.src} className="group">
+                <div className="overflow-hidden">
+                  <img
+                    src={img.src}
+                    alt={img.label}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover transition duration-1000 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <figcaption className="mt-4">
+                  <span className="kicker text-muted-foreground">{img.label}</span>
+                  <p className="mt-1 text-sm font-light italic text-muted-foreground">{img.caption}</p>
+                </figcaption>
+              </figure>
+            ))}
           </div>
 
           {/* Interiores — grid expandido */}
