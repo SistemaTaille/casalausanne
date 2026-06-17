@@ -277,8 +277,47 @@ function Index() {
         </div>
       </section>
 
+      {/* Plantas */}
+      <section id="plantas" className="border-b border-border">
+        <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
+          <div className="mb-16 flex items-end justify-between gap-8">
+            <div>
+              <p className="kicker text-muted-foreground">03 — Plantas</p>
+              <h2 className="mt-6 font-display text-4xl md:text-6xl">Plantas baixas</h2>
+            </div>
+            <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
+              Clique em cada planta para ampliar em tela cheia.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10">
+            {plantas.map((p) => (
+              <figure key={p.src} className="group">
+                <button
+                  type="button"
+                  onClick={() => setLightbox({ src: p.src, label: p.label })}
+                  className="block w-full cursor-zoom-in overflow-hidden bg-white"
+                  aria-label={`Ampliar ${p.label}`}
+                >
+                  <img
+                    src={p.src}
+                    alt={p.label}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-contain p-4 transition duration-700 group-hover:scale-[1.02] md:p-8"
+                  />
+                </button>
+                <figcaption className="mt-4 flex items-baseline justify-between gap-4">
+                  <span className="kicker text-muted-foreground">{p.label}</span>
+                  <span className="text-right text-sm font-light italic text-muted-foreground">{p.caption}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Diferenciais */}
       <section id="diferenciais" className="border-b border-border">
+
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-4">
             <p className="kicker text-muted-foreground">03 — Diferenciais</p>
