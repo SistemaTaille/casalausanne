@@ -78,7 +78,7 @@ const gallery = [
 ];
 
 const interiores = [
-  { src: int0085.url, label: "Living Social", caption: "Ampla lareira e pé-direito duplo" },
+  { src: livingSocialTv.url, label: "Living Social", caption: "Ampla lareira e pé-direito duplo" },
   { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
   { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
   { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
