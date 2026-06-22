@@ -322,6 +322,10 @@ function Index() {
             </div>
             <p className="hidden text-sm text-muted-foreground md:block">{interiores.length} imagens</p>
           </div>
+          <p className="mb-12 max-w-3xl text-sm font-light italic leading-relaxed text-muted-foreground md:text-base">
+            As imagens internas são ilustrativas e têm o objetivo de demonstrar possibilidades de ambientação.
+            Mobiliário, decoração e demais elementos são meramente sugestivos e não integram o imóvel.
+          </p>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             {interiores.map((img) => (
               <figure key={img.src} className="group">
