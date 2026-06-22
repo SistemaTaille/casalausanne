@@ -90,10 +90,10 @@ const exteriores = [
   { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
 ];
 
-const fichaTecnica = [
+const fichaTecnica: { label: string; value: string; unit: string; detalhe?: string }[] = [
   { label: "Área Construída", value: "290,98", unit: "m²" },
   { label: "Área do Terreno", value: "597,60", unit: "m²" },
-  { label: "Área Equivalente", value: "330,00", unit: "m²" },
+  { label: "Área Equivalente", value: "341,86", unit: "m²", detalhe: "290,98 casa + 15,78 terraço de jardim + 21 deck + 14,1 piscina" },
   { label: "Suítes", value: "03", unit: "" },
   { label: "Vagas", value: "02", unit: "" },
 ];
