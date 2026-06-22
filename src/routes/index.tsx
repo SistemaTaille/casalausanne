@@ -56,7 +56,7 @@ export const Route = createFileRoute("/")({
 const gallery = [
   { src: fachadaPrincipal.url, label: "Fachada Principal", caption: "Volumetria contemporânea com brises de madeira e vidros de chão ao teto" },
   { src: fundosDia.url, label: "Fachada Posterior", caption: "Integração com o jardim e área de piscina" },
-  { src: living.url, label: "Living Pé-direito Duplo", caption: "Lareira em mármore travertino e pé-direito duplo" },
+  { src: living.url, label: "Living Pé-direito Duplo", caption: "Ampla lareira travertino e pé-direito duplo" },
   { src: fachadaFrente.url, label: "Acesso Principal", caption: "Pórtico em concreto e madeira" },
   { src: piscinaNoite.url, label: "Piscina — Anoitecer", caption: "Iluminação cênica e revestimento em pastilhas" },
   { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea com brises de madeira" },
