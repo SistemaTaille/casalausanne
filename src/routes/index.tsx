@@ -205,13 +205,27 @@ function Index() {
           </div>
           <div className="md:col-span-8">
             <h2 className="font-display text-4xl leading-tight md:text-6xl">
-              Uma residência pensada para quem busca <em className="italic">privacidade, conforto e desenho</em> em cada detalhe.
+              Inspirada em <em className="italic">Lausanne</em>, na Suíça — uma das cidades mais encantadoras às margens do Lago Léman.
             </h2>
-            <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-              A Casa Lausanne se ergue em meio à natureza do Condomínio Serra Azul. São 326,08 m² de área equivalente,
-              distribuídos em dois pavimentos, com pé-direito duplo no living, três suítes amplas, escritório e
-              integração total entre os ambientes sociais e a área externa com piscina.
-            </p>
+            <div className="mt-10 max-w-2xl space-y-6 text-base font-light leading-relaxed text-muted-foreground md:text-lg">
+              <p>
+                Da elegância e do estilo de vida suíços nasce a Casa Lausanne, na Rua Alpes Suíços: um projeto que
+                traduz sofisticação, conforto e uma relação única com a paisagem e o pôr do sol. Cada detalhe valoriza
+                o olhar, a luz e o bem viver.
+              </p>
+              <p>
+                Os espaços foram pensados para proporcionar amplitude, integração e uma conexão privilegiada com o
+                entorno. A Suíte Master, com acesso ao terraço jardim privativo, traduz esse conceito — um refúgio
+                onde o dia começa e termina com cenários únicos.
+              </p>
+              <p>
+                Mais que uma residência, um convite para viver com exclusividade, contemplação e qualidade de vida.
+                São 326,08 m² de área equivalente, distribuídos em dois pavimentos, com pé-direito duplo no living,
+                três suítes amplas, escritório e integração total entre os ambientes sociais e a área externa com
+                piscina.
+              </p>
+            </div>
+
 
             <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
               {fichaTecnica.map((item) => (
