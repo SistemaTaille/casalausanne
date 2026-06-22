@@ -499,23 +499,55 @@ function Index() {
           aria-modal="true"
           aria-label={lightbox.label}
         >
-          <div className="flex items-center justify-between px-6 py-5 md:px-10">
+          <div className="flex items-center justify-between gap-4 px-6 py-5 md:px-10">
             <span className="kicker text-white/80">{lightbox.label}</span>
-            <button
-              type="button"
-              onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
-              className="kicker border-b border-white/60 pb-0.5 text-white/90 transition hover:text-white"
-              aria-label="Fechar"
-            >
-              Fechar ✕
-            </button>
+            <div className="flex items-center gap-4" onClick={(e) => e.stopPropagation()}>
+              <button
+                type="button"
+                onClick={() => setZoom((z) => Math.max(z - 0.5, 1))}
+                className="kicker text-white/80 transition hover:text-white"
+                aria-label="Diminuir zoom"
+              >− Zoom</button>
+              <span className="kicker text-white/60 tabular-nums">{Math.round(zoom * 100)}%</span>
+              <button
+                type="button"
+                onClick={() => setZoom((z) => Math.min(z + 0.5, 5))}
+                className="kicker text-white/80 transition hover:text-white"
+                aria-label="Aumentar zoom"
+              >+ Zoom</button>
+              <button
+                type="button"
+                onClick={() => { setZoom(1); setOrigin({ x: 50, y: 50 }); }}
+                className="kicker text-white/60 transition hover:text-white"
+                aria-label="Resetar zoom"
+              >Reset</button>
+              <button
+                type="button"
+                onClick={() => setLightbox(null)}
+                className="kicker border-b border-white/60 pb-0.5 text-white/90 transition hover:text-white"
+                aria-label="Fechar"
+              >Fechar ✕</button>
+            </div>
           </div>
-          <div className="flex flex-1 items-center justify-center overflow-auto p-4 md:p-10">
+          <div
+            className="flex flex-1 items-center justify-center overflow-hidden p-4 md:p-10"
+            onMouseMove={(e) => {
+              if (zoom <= 1) return;
+              const rect = e.currentTarget.getBoundingClientRect();
+              const x = ((e.clientX - rect.left) / rect.width) * 100;
+              const y = ((e.clientY - rect.top) / rect.height) * 100;
+              setOrigin({ x, y });
+            }}
+          >
             <img
               src={lightbox.src}
               alt={lightbox.label}
-              onClick={(e) => e.stopPropagation()}
-              className="max-h-full max-w-full cursor-zoom-out bg-white object-contain"
+              onClick={(e) => {
+                e.stopPropagation();
+                setZoom((z) => (z >= 3 ? 1 : z + 1));
+              }}
+              style={{ transform: `scale(${zoom})`, transformOrigin: `${origin.x}% ${origin.y}%` }}
+              className={`max-h-full max-w-full bg-white object-contain transition-transform duration-200 ${zoom > 1 ? "cursor-zoom-out" : "cursor-zoom-in"}`}
             />
           </div>
         </div>
