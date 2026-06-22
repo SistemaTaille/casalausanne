@@ -93,11 +93,10 @@ const exteriores = [
 const fichaTecnica: { label: string; value: string; unit: string; composicao?: { area: string; item: string }[] }[] = [
   {
     label: "Área Equivalente",
-    value: "341,86",
+    value: "326,08",
     unit: "m²",
     composicao: [
       { area: "290,98 m²", item: "casa" },
-      { area: "15,78 m²", item: "terraço de jardim" },
       { area: "21 m²", item: "deck" },
       { area: "14,1 m²", item: "piscina" },
     ],
