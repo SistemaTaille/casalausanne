@@ -114,6 +114,8 @@ const diferenciais = [
   { titulo: "Duto de Roupas Sujas", desc: "Sistema integrado que conduz as roupas do segundo pavimento diretamente para a lavanderia no térreo, eliminando o transporte manual pelas escadas." },
   { titulo: "Piscina com Deck", desc: "Piscina revestida em pastilhas com iluminação cênica, deck em madeira e piso atérmico ao redor — confortável aos pés mesmo sob o sol. Área de lazer integrada ao living e tratamento da água por clorador iGUi: água sempre cristalina, menor uso de produtos químicos e manutenção simplificada." },
   { titulo: "Pé-direito Duplo", desc: "Living social com vidros de chão ao teto e lareira revestida em mármore — luz natural e proporção generosa." },
+  { titulo: "Aberturas em PVC", desc: "Esquadrias em PVC na cor preta com telas em todos os ambientes — desempenho térmico e acústico superior, baixa manutenção e proteção contra insetos. Nas suítes e no escritório, as aberturas são automatizadas, com acionamento integrado ao sistema da casa." },
+  { titulo: "Porcelanato Classe A", desc: "Revestimento em porcelanato classe A no formato 1,20 × 1,20 m — peças de grande formato que ampliam visualmente os ambientes, com menos juntas, acabamento contínuo e alta resistência." },
 ];
 
 function Index() {
