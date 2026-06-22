@@ -326,7 +326,7 @@ function Index() {
             <div>
               <p className="kicker text-muted-foreground">04 — Interiores</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">
-                Ambientes <em className="italic text-muted-foreground">— ambientes</em>
+                <em className="italic">Ambientes</em>
               </h2>
             </div>
             <p className="hidden text-sm text-muted-foreground md:block">{interiores.length} imagens</p>
