@@ -27,7 +27,8 @@ import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
 import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
 import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
 import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
-import plantaTerreo from "@/assets/planta-terreo-v2.jpg.asset.json";
+import plantaTerreo from "@/assets/planta-terreo-v3.jpg.asset.json";
+import livingSocialTv from "@/assets/living-social-tv.jpg.asset.json";
 import plantaSuperior from "@/assets/planta-superior-v2.jpg.asset.json";
 import porDoSolTerreno from "@/assets/por-do-sol-terreno.jpg.asset.json";
 
@@ -77,7 +78,7 @@ const gallery = [
 ];
 
 const interiores = [
-  { src: int0085.url, label: "Living Social", caption: "Ampla lareira e pé-direito duplo" },
+  { src: livingSocialTv.url, label: "Living Social", caption: "Ampla lareira e pé-direito duplo" },
   { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
   { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
   { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
@@ -86,19 +87,19 @@ const interiores = [
 const exteriores = [
   { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "Beirais profundos, painéis em madeira e fachada em vidro" },
   { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "Cobertura em laje, brises ripados e átrio envidraçado" },
-  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "Pastilhas verdes, deck em madeira e pergolado estrutural" },
+  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "Pastilhas verdes, deck em madeira nobre Garapeira e pergolado estrutural" },
   { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
 ];
 
 const fichaTecnica: { label: string; value: string; unit: string; composicao?: { area: string; item: string }[] }[] = [
   {
     label: "Área Equivalente",
-    value: "326,08",
+    value: "328,18",
     unit: "m²",
     composicao: [
       { area: "290,98 m²", item: "casa" },
-      { area: "21 m²", item: "deck" },
-      { area: "14,1 m²", item: "piscina" },
+      { area: "14,10 m²", item: "deck" },
+      { area: "23,10 m²", item: "piscina" },
     ],
   },
   { label: "Área Construída", value: "290,98", unit: "m²" },
@@ -220,7 +221,7 @@ function Index() {
               </p>
               <p>
                 Mais que uma residência, um convite para viver com exclusividade, contemplação e qualidade de vida.
-                São 326,08 m² de área equivalente, distribuídos em dois pavimentos, com pé-direito duplo no living,
+                São 328,18 m² de área equivalente, distribuídos em dois pavimentos, com pé-direito duplo no living,
                 três suítes amplas, escritório e integração total entre os ambientes sociais e a área externa com
                 piscina.
               </p>
