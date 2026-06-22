@@ -208,7 +208,7 @@ function Index() {
               Uma residência pensada para quem busca <em className="italic">privacidade, conforto e desenho</em> em cada detalhe.
             </h2>
             <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-              A Casa Lausanne se ergue em meio à natureza do Condomínio Serra Azul. São 341,86 m² de área equivalente,
+              A Casa Lausanne se ergue em meio à natureza do Condomínio Serra Azul. São 326,08 m² de área equivalente,
               distribuídos em dois pavimentos, com pé-direito duplo no living, três suítes amplas, escritório e
               integração total entre os ambientes sociais e a área externa com piscina.
             </p>
