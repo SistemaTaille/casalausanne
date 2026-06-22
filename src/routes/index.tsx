@@ -119,6 +119,8 @@ const diferenciais = [
 function Index() {
   const [scrolled, setScrolled] = useState(false);
   const [lightbox, setLightbox] = useState<{ src: string; label: string } | null>(null);
+  const [zoom, setZoom] = useState(1);
+  const [origin, setOrigin] = useState({ x: 50, y: 50 });
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
@@ -126,7 +128,14 @@ function Index() {
   }, []);
   useEffect(() => {
     if (!lightbox) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(null); };
+    setZoom(1);
+    setOrigin({ x: 50, y: 50 });
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "+" || e.key === "=") setZoom((z) => Math.min(z + 0.5, 5));
+      if (e.key === "-") setZoom((z) => Math.max(z - 0.5, 1));
+      if (e.key === "0") { setZoom(1); setOrigin({ x: 50, y: 50 }); }
+    };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKey);
     return () => {
