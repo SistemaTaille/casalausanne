@@ -39,9 +39,9 @@ const plantas = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Casa Laussane — Condomínio Serra Azul" },
+      { title: "Casa Lausanne — Condomínio Serra Azul" },
       { name: "description", content: "Residência contemporânea de alto padrão no Condomínio Serra Azul. 290,98 m² construídos, 3 suítes, piscina, automação e piso aquecido." },
-      { property: "og:title", content: "Casa Laussane — Condomínio Serra Azul" },
+      { property: "og:title", content: "Casa Lausanne — Condomínio Serra Azul" },
       { property: "og:description", content: "Residência contemporânea de alto padrão. 290,98 m² construídos, 3 suítes, piscina, automação." },
       { property: "og:type", content: "website" },
       { property: "og:image", content: fachadaPrincipal.url },
@@ -134,7 +134,7 @@ function Index() {
         }`}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12">
-          <a href="#topo" className="font-display text-xl tracking-tight">Casa Laussane</a>
+          <a href="#topo" className="font-display text-xl tracking-tight">Casa Lausanne</a>
           <nav className="hidden gap-10 md:flex">
             {[
               ["O Imóvel", "imovel"],
@@ -160,13 +160,13 @@ function Index() {
 
       {/* Hero */}
       <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden">
-        <img src={fachadaPrincipal.url} alt="Casa Laussane — fachada principal" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={fachadaPrincipal.url} alt="Casa Lausanne — fachada principal" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
           <p className="kicker mb-6 text-sm text-white tracking-[0.22em] font-medium">Condomínio Serra Azul</p>
           <h1 className="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.95] text-white">
             Casa<br />
-            <em className="not-italic font-normal italic">Laussane</em>
+            <em className="not-italic font-normal italic">Lausanne</em>
           </h1>
           <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
             <p className="max-w-md text-base font-light text-white/90 md:text-lg">
@@ -190,7 +190,7 @@ function Index() {
               Uma residência pensada para quem busca <em className="italic">privacidade, conforto e desenho</em> em cada detalhe.
             </h2>
             <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-              A Casa Laussane se ergue em meio à natureza do Condomínio Serra Azul. São 290,98 m² de construção
+              A Casa Lausanne se ergue em meio à natureza do Condomínio Serra Azul. São 290,98 m² de construção
               distribuídos em dois pavimentos, com pé-direito duplo no living, três suítes amplas, escritório e
               integração total entre os ambientes sociais e a área externa com piscina.
             </p>
@@ -215,7 +215,7 @@ function Index() {
         <div className="relative">
           <img
             src={porDoSolTerreno.url}
-            alt="Pôr do sol visto do terreno da Casa Laussane"
+            alt="Pôr do sol visto do terreno da Casa Lausanne"
             className="h-[60vh] min-h-[420px] w-full object-cover md:h-[85vh]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
@@ -381,7 +381,7 @@ function Index() {
           <div className="md:col-span-4">
             <p className="kicker text-muted-foreground">07 — Diferenciais</p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-5xl">
-              O que faz a Laussane <em className="italic">única</em>.
+              O que faz a Lausanne <em className="italic">única</em>.
             </h2>
           </div>
           <div className="md:col-span-8">
@@ -427,7 +427,7 @@ function Index() {
           </div>
           <div className="md:col-span-7">
             <div className="overflow-hidden">
-              <img src={fachadaLateral.url} alt="Vista lateral da Casa Laussane no condomínio" className="aspect-[4/5] w-full object-cover" />
+              <img src={fachadaLateral.url} alt="Vista lateral da Casa Lausanne no condomínio" className="aspect-[4/5] w-full object-cover" />
             </div>
           </div>
         </div>
@@ -438,17 +438,17 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <p className="kicker text-background/60">Contato</p>
           <h2 className="mt-8 max-w-4xl font-display text-5xl leading-[1.05] md:text-8xl">
-            Conheça a Casa <em className="italic">Laussane</em> pessoalmente.
+            Conheça a Casa <em className="italic">Lausanne</em> pessoalmente.
           </h2>
           <p className="mt-10 max-w-2xl text-base font-light text-background/70 md:text-lg">
             Agende uma visita guiada com a imobiliária de sua confiança e conheça pessoalmente
-            cada detalhe da Casa Laussane.
+            cada detalhe da Casa Lausanne.
           </p>
         </div>
 
         <div className="border-t border-background/20">
           <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-8 text-xs text-background/50 md:flex-row md:items-center md:justify-between md:px-12">
-            <p>© {new Date().getFullYear()} Casa Laussane · Condomínio Serra Azul</p>
+            <p>© {new Date().getFullYear()} Casa Lausanne · Condomínio Serra Azul</p>
             <p className="kicker">Projeto · Paulo Lopes Arquiteto</p>
           </div>
         </div>
