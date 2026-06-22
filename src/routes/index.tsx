@@ -27,8 +27,8 @@ import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
 import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
 import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
 import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
-import plantaTerreo from "@/assets/planta-terreo.jpg.asset.json";
-import plantaSuperior from "@/assets/planta-superior.jpg.asset.json";
+import plantaTerreo from "@/assets/planta-terreo-v2.jpg.asset.json";
+import plantaSuperior from "@/assets/planta-superior-v2.jpg.asset.json";
 import porDoSolTerreno from "@/assets/por-do-sol-terreno.jpg.asset.json";
 
 const plantas = [
@@ -119,6 +119,8 @@ const diferenciais = [
 function Index() {
   const [scrolled, setScrolled] = useState(false);
   const [lightbox, setLightbox] = useState<{ src: string; label: string } | null>(null);
+  const [zoom, setZoom] = useState(1);
+  const [origin, setOrigin] = useState({ x: 50, y: 50 });
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
@@ -126,7 +128,14 @@ function Index() {
   }, []);
   useEffect(() => {
     if (!lightbox) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(null); };
+    setZoom(1);
+    setOrigin({ x: 50, y: 50 });
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "+" || e.key === "=") setZoom((z) => Math.min(z + 0.5, 5));
+      if (e.key === "-") setZoom((z) => Math.max(z - 0.5, 1));
+      if (e.key === "0") { setZoom(1); setOrigin({ x: 50, y: 50 }); }
+    };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKey);
     return () => {
@@ -490,23 +499,55 @@ function Index() {
           aria-modal="true"
           aria-label={lightbox.label}
         >
-          <div className="flex items-center justify-between px-6 py-5 md:px-10">
+          <div className="flex items-center justify-between gap-4 px-6 py-5 md:px-10">
             <span className="kicker text-white/80">{lightbox.label}</span>
-            <button
-              type="button"
-              onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
-              className="kicker border-b border-white/60 pb-0.5 text-white/90 transition hover:text-white"
-              aria-label="Fechar"
-            >
-              Fechar ✕
-            </button>
+            <div className="flex items-center gap-4" onClick={(e) => e.stopPropagation()}>
+              <button
+                type="button"
+                onClick={() => setZoom((z) => Math.max(z - 0.5, 1))}
+                className="kicker text-white/80 transition hover:text-white"
+                aria-label="Diminuir zoom"
+              >− Zoom</button>
+              <span className="kicker text-white/60 tabular-nums">{Math.round(zoom * 100)}%</span>
+              <button
+                type="button"
+                onClick={() => setZoom((z) => Math.min(z + 0.5, 5))}
+                className="kicker text-white/80 transition hover:text-white"
+                aria-label="Aumentar zoom"
+              >+ Zoom</button>
+              <button
+                type="button"
+                onClick={() => { setZoom(1); setOrigin({ x: 50, y: 50 }); }}
+                className="kicker text-white/60 transition hover:text-white"
+                aria-label="Resetar zoom"
+              >Reset</button>
+              <button
+                type="button"
+                onClick={() => setLightbox(null)}
+                className="kicker border-b border-white/60 pb-0.5 text-white/90 transition hover:text-white"
+                aria-label="Fechar"
+              >Fechar ✕</button>
+            </div>
           </div>
-          <div className="flex flex-1 items-center justify-center overflow-auto p-4 md:p-10">
+          <div
+            className="flex flex-1 items-center justify-center overflow-hidden p-4 md:p-10"
+            onMouseMove={(e) => {
+              if (zoom <= 1) return;
+              const rect = e.currentTarget.getBoundingClientRect();
+              const x = ((e.clientX - rect.left) / rect.width) * 100;
+              const y = ((e.clientY - rect.top) / rect.height) * 100;
+              setOrigin({ x, y });
+            }}
+          >
             <img
               src={lightbox.src}
               alt={lightbox.label}
-              onClick={(e) => e.stopPropagation()}
-              className="max-h-full max-w-full cursor-zoom-out bg-white object-contain"
+              onClick={(e) => {
+                e.stopPropagation();
+                setZoom((z) => (z >= 3 ? 1 : z + 1));
+              }}
+              style={{ transform: `scale(${zoom})`, transformOrigin: `${origin.x}% ${origin.y}%` }}
+              className={`max-h-full max-w-full bg-white object-contain transition-transform duration-200 ${zoom > 1 ? "cursor-zoom-out" : "cursor-zoom-in"}`}
             />
           </div>
         </div>
