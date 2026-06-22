@@ -77,8 +77,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "author", content: "Casa Laussane" },
-      { name: "twitter:site", content: "@CasaLaussane" },
+      { name: "author", content: "Casa Lausanne" },
+      { name: "twitter:site", content: "@CasaLausanne" },
       { title: "Lovable App" },
       { property: "og:title", content: "Lovable App" },
       { name: "twitter:title", content: "Lovable App" },
