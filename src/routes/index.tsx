@@ -27,7 +27,7 @@ import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
 import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
 import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
 import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
-import plantaTerreo from "@/assets/planta-terreo-v3.jpg.asset.json";
+import plantaTerreo from "@/assets/planta-terreo-v4.jpg.asset.json";
 import livingSocialTv from "@/assets/living-social-tv.jpg.asset.json";
 import plantaSuperior from "@/assets/planta-superior-v2.jpg.asset.json";
 import porDoSolTerreno from "@/assets/por-do-sol-terreno.jpg.asset.json";
@@ -78,17 +78,17 @@ const gallery = [
 ];
 
 const interiores = [
-  { src: livingSocialTv.url, label: "Living Social", caption: "Ampla lareira e pé-direito duplo" },
-  { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
-  { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
-  { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
+  { src: livingSocialTv.url, label: "Living Social", caption: "" },
+  { src: int0087.url, label: "Estar Íntimo", caption: "" },
+  { src: int0075.url, label: "Hall e Circulação", caption: "" },
+  { src: int0070.url, label: "Área da Piscina", caption: "" },
 ];
 
 const exteriores = [
-  { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "Beirais profundos, painéis em madeira e fachada em vidro" },
-  { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "Cobertura em laje, brises ripados e átrio envidraçado" },
-  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "Pastilhas verdes, deck em madeira nobre Garapeira e pergolado estrutural" },
-  { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
+  { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "" },
+  { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "" },
+  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "" },
+  { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "" },
 ];
 
 const fichaTecnica: { label: string; value: string; unit: string; composicao?: { area: string; item: string }[] }[] = [
@@ -114,6 +114,8 @@ const diferenciais = [
   { titulo: "Duto de Roupas Sujas", desc: "Sistema integrado que conduz as roupas do segundo pavimento diretamente para a lavanderia no térreo, eliminando o transporte manual pelas escadas." },
   { titulo: "Piscina com Deck", desc: "Piscina revestida em pastilhas com iluminação cênica, deck em madeira e piso atérmico ao redor — confortável aos pés mesmo sob o sol. Área de lazer integrada ao living e tratamento da água por clorador iGUi: água sempre cristalina, menor uso de produtos químicos e manutenção simplificada." },
   { titulo: "Pé-direito Duplo", desc: "Living social com vidros de chão ao teto e lareira revestida em mármore — luz natural e proporção generosa." },
+  { titulo: "Aberturas em PVC", desc: "Esquadrias em PVC na cor preta com telas em todos os ambientes — desempenho térmico e acústico superior, baixa manutenção e proteção contra insetos. Nas suítes e no escritório, as aberturas são automatizadas, com acionamento integrado ao sistema da casa." },
+  { titulo: "Porcelanato Classe A", desc: "Revestimento em porcelanato classe A no formato 1,20 × 1,20 m — peças de grande formato que ampliam visualmente os ambientes, com menos juntas, acabamento contínuo e alta resistência." },
 ];
 
 function Index() {
