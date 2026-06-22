@@ -29,6 +29,7 @@ import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
 import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
 import plantaTerreo from "@/assets/planta-terreo.jpg.asset.json";
 import plantaSuperior from "@/assets/planta-superior.jpg.asset.json";
+import porDoSolTerreno from "@/assets/por-do-sol-terreno.jpg.asset.json";
 
 const plantas = [
   { src: plantaTerreo.url, label: "Pavimento Térreo", caption: "Living, cozinha gourmet, área de piscina e garagem" },
@@ -136,6 +137,7 @@ function Index() {
           <nav className="hidden gap-10 md:flex">
             {[
               ["O Imóvel", "imovel"],
+              ["O Terreno", "terreno"],
               ["Exteriores", "exteriores"],
               ["Interiores", "interiores"],
               ["Galeria", "galeria"],
@@ -207,12 +209,56 @@ function Index() {
         </div>
       </section>
 
+      {/* O Terreno */}
+      <section id="terreno" className="border-b border-border bg-secondary/40">
+        <div className="relative">
+          <img
+            src={porDoSolTerreno.url}
+            alt="Pôr do sol visto do terreno da Casa Laussane"
+            className="h-[60vh] min-h-[420px] w-full object-cover md:h-[85vh]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1600px] flex-col justify-end px-6 pb-12 md:px-12 md:pb-20">
+            <p className="kicker text-white/85">02 — O Terreno</p>
+            <h2 className="mt-6 max-w-4xl font-display text-3xl leading-[1.05] text-white md:text-6xl">
+              O privilégio de um <em className="italic">pôr do sol</em> que nunca será interrompido.
+            </h2>
+          </div>
+        </div>
+        <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-20 md:grid-cols-12 md:px-12 md:py-28">
+          <div className="md:col-span-5">
+            <p className="text-base font-light leading-relaxed text-muted-foreground md:text-lg">
+              Implantado em ponto privilegiado do Condomínio Serra Azul, o terreno garante vista aberta para
+              o horizonte e um pôr do sol contemplado todos os dias — sem construções que possam interromper
+              a paisagem no futuro.
+            </p>
+          </div>
+          <div className="md:col-span-7">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3">
+              {[
+                { label: "Testada", value: "14,94", unit: "m" },
+                { label: "Profundidade", value: "40,00", unit: "m" },
+                { label: "Área Total", value: "597,60", unit: "m²" },
+              ].map((item) => (
+                <div key={item.label} className="border-t border-foreground pt-4">
+                  <p className="kicker text-muted-foreground">{item.label}</p>
+                  <p className="mt-3 font-display text-3xl md:text-5xl">
+                    {item.value}
+                    <span className="ml-1 text-xl text-muted-foreground">{item.unit}</span>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Exteriores */}
-      <section id="exteriores" className="border-b border-border bg-secondary/40">
+      <section id="exteriores" className="border-b border-border">
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-12 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">02 — Exteriores</p>
+              <p className="kicker text-muted-foreground">03 — Exteriores</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">
                 Arquitetura <em className="italic text-muted-foreground">— arquitetura</em>
               </h2>
@@ -241,11 +287,11 @@ function Index() {
       </section>
 
       {/* Interiores */}
-      <section id="interiores" className="border-b border-border">
+      <section id="interiores" className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-12 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">03 — Interiores</p>
+              <p className="kicker text-muted-foreground">04 — Interiores</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">
                 Ambientes <em className="italic text-muted-foreground">— ambientes</em>
               </h2>
@@ -274,11 +320,11 @@ function Index() {
       </section>
 
       {/* Galeria */}
-      <section id="galeria" className="border-b border-border bg-secondary/40">
+      <section id="galeria" className="border-b border-border">
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-20 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">04 — Galeria</p>
+              <p className="kicker text-muted-foreground">05 — Galeria</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">Os ambientes</h2>
             </div>
             <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
@@ -291,11 +337,11 @@ function Index() {
       </section>
 
       {/* Plantas */}
-      <section id="plantas" className="border-b border-border">
+      <section id="plantas" className="border-b border-border bg-secondary/40">
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-16 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">05 — Plantas</p>
+              <p className="kicker text-muted-foreground">06 — Plantas</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">Plantas baixas</h2>
             </div>
             <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
@@ -332,7 +378,7 @@ function Index() {
       <section id="diferenciais" className="border-b border-border">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-4">
-            <p className="kicker text-muted-foreground">06 — Diferenciais</p>
+            <p className="kicker text-muted-foreground">07 — Diferenciais</p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-5xl">
               O que faz a Laussane <em className="italic">única</em>.
             </h2>
@@ -357,7 +403,7 @@ function Index() {
       <section id="localizacao" className="border-b border-border bg-secondary/40">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-5">
-            <p className="kicker text-muted-foreground">07 — Localização</p>
+            <p className="kicker text-muted-foreground">08 — Localização</p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
               Condomínio<br /><em className="italic">Serra Azul</em>
             </h2>
