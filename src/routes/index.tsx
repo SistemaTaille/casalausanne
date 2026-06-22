@@ -87,19 +87,19 @@ const interiores = [
 const exteriores = [
   { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "Beirais profundos, painéis em madeira e fachada em vidro" },
   { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "Cobertura em laje, brises ripados e átrio envidraçado" },
-  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "Pastilhas verdes, deck em madeira e pergolado estrutural" },
+  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "Pastilhas verdes, deck em madeira nobre Garapeira e pergolado estrutural" },
   { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
 ];
 
 const fichaTecnica: { label: string; value: string; unit: string; composicao?: { area: string; item: string }[] }[] = [
   {
     label: "Área Equivalente",
-    value: "326,08",
+    value: "328,18",
     unit: "m²",
     composicao: [
       { area: "290,98 m²", item: "casa" },
-      { area: "21 m²", item: "deck" },
-      { area: "14,1 m²", item: "piscina" },
+      { area: "14,10 m²", item: "deck" },
+      { area: "23,10 m²", item: "piscina" },
     ],
   },
   { label: "Área Construída", value: "290,98", unit: "m²" },
