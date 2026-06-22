@@ -293,7 +293,7 @@ function Index() {
             <div>
               <p className="kicker text-muted-foreground">03 — Exteriores</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">
-                Arquitetura <em className="italic text-muted-foreground">— arquitetura</em>
+                <em className="italic">Arquitetura</em>
               </h2>
             </div>
             <p className="hidden text-sm text-muted-foreground md:block">{exteriores.length} imagens</p>
