@@ -90,8 +90,18 @@ const exteriores = [
   { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
 ];
 
-const fichaTecnica: { label: string; value: string; unit: string; detalhe?: string }[] = [
-  { label: "Área Equivalente", value: "341,86", unit: "m²", detalhe: "290,98 casa + 15,78 terraço de jardim + 21 deck + 14,1 piscina" },
+const fichaTecnica: { label: string; value: string; unit: string; composicao?: { area: string; item: string }[] }[] = [
+  {
+    label: "Área Equivalente",
+    value: "341,86",
+    unit: "m²",
+    composicao: [
+      { area: "290,98 m²", item: "casa" },
+      { area: "15,78 m²", item: "terraço de jardim" },
+      { area: "21 m²", item: "deck" },
+      { area: "14,1 m²", item: "piscina" },
+    ],
+  },
   { label: "Área Construída", value: "290,98", unit: "m²" },
   { label: "Área do Terreno", value: "597,60", unit: "m²" },
   { label: "Suítes", value: "03", unit: "" },
@@ -203,8 +213,18 @@ function Index() {
                     {item.value}
                     <span className="ml-1 text-xl text-muted-foreground">{item.unit}</span>
                   </p>
-                  {item.detalhe && (
-                    <p className="mt-2 text-xs font-light leading-relaxed text-muted-foreground">{item.detalhe}</p>
+                  {item.composicao && (
+                    <div className="mt-4 text-xs font-light leading-relaxed text-muted-foreground">
+                      <p className="mb-1 opacity-70">(composição)</p>
+                      <ul className="space-y-1">
+                        {item.composicao.map((c) => (
+                          <li key={c.item} className="flex items-baseline justify-between gap-3 border-b border-border/40 pb-1">
+                            <span className="italic">{c.item}</span>
+                            <span className="font-display tracking-tight text-foreground/80">{c.area}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
                 </div>
               ))}
