@@ -78,17 +78,17 @@ const gallery = [
 ];
 
 const interiores = [
-  { src: livingSocialTv.url, label: "Living Social", caption: "Ampla lareira e pé-direito duplo" },
-  { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
-  { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
-  { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
+  { src: livingSocialTv.url, label: "Living Social", caption: "" },
+  { src: int0087.url, label: "Estar Íntimo", caption: "" },
+  { src: int0075.url, label: "Hall e Circulação", caption: "" },
+  { src: int0070.url, label: "Área da Piscina", caption: "" },
 ];
 
 const exteriores = [
-  { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "Beirais profundos, painéis em madeira e fachada em vidro" },
-  { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "Cobertura em laje, brises ripados e átrio envidraçado" },
-  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "Pastilhas verdes, deck em madeira nobre Garapeira e pergolado estrutural" },
-  { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
+  { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "" },
+  { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "" },
+  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "" },
+  { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "" },
 ];
 
 const fichaTecnica: { label: string; value: string; unit: string; composicao?: { area: string; item: string }[] }[] = [
