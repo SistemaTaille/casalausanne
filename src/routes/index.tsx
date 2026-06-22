@@ -415,7 +415,7 @@ function Index() {
             <dl className="mt-12 space-y-5">
               {[
                 ["Segurança", "Portaria e ronda 24h"],
-                ["Lazer", "Clube, quadras e trilhas"],
+                ["Lazer", "Piscina, academia, quadras e salões de festa"],
                 ["Entorno", "Reserva de mata nativa"],
               ].map(([k, v]) => (
                 <div key={k} className="flex items-baseline justify-between border-b border-border pb-3">
