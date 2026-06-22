@@ -56,7 +56,7 @@ export const Route = createFileRoute("/")({
 const gallery = [
   { src: fachadaPrincipal.url, label: "Fachada Principal", caption: "Volumetria contemporânea com brises de madeira e vidros de chão ao teto" },
   { src: fundosDia.url, label: "Fachada Posterior", caption: "Integração com o jardim e área de piscina" },
-  { src: living.url, label: "Living Pé-direito Duplo", caption: "Lareira em mármore travertino e pé-direito duplo" },
+  { src: living.url, label: "Living Pé-direito Duplo", caption: "Ampla lareira travertino e pé-direito duplo" },
   { src: fachadaFrente.url, label: "Acesso Principal", caption: "Pórtico em concreto e madeira" },
   { src: piscinaNoite.url, label: "Piscina — Anoitecer", caption: "Iluminação cênica e revestimento em pastilhas" },
   { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea com brises de madeira" },
@@ -77,7 +77,7 @@ const gallery = [
 ];
 
 const interiores = [
-  { src: int0085.url, label: "Living Social", caption: "Lareira em mármore travertino e pé-direito duplo" },
+  { src: int0085.url, label: "Living Social", caption: "Ampla lareira travertino e pé-direito duplo" },
   { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
   { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
   { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
@@ -93,11 +93,10 @@ const exteriores = [
 const fichaTecnica: { label: string; value: string; unit: string; composicao?: { area: string; item: string }[] }[] = [
   {
     label: "Área Equivalente",
-    value: "341,86",
+    value: "326,08",
     unit: "m²",
     composicao: [
       { area: "290,98 m²", item: "casa" },
-      { area: "15,78 m²", item: "terraço de jardim" },
       { area: "21 m²", item: "deck" },
       { area: "14,1 m²", item: "piscina" },
     ],
@@ -209,7 +208,7 @@ function Index() {
               Uma residência pensada para quem busca <em className="italic">privacidade, conforto e desenho</em> em cada detalhe.
             </h2>
             <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-              A Casa Lausanne se ergue em meio à natureza do Condomínio Serra Azul. São 341,86 m² de área equivalente,
+              A Casa Lausanne se ergue em meio à natureza do Condomínio Serra Azul. São 326,08 m² de área equivalente,
               distribuídos em dois pavimentos, com pé-direito duplo no living, três suítes amplas, escritório e
               integração total entre os ambientes sociais e a área externa com piscina.
             </p>
