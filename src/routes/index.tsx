@@ -215,8 +215,8 @@ function Index() {
               </p>
               <p>
                 Os espaços foram pensados para proporcionar amplitude, integração e uma conexão privilegiada com o
-                entorno. A Suíte Master, com acesso ao terraço jardim privativo, traduz esse conceito — um refúgio
-                onde o dia começa e termina com cenários únicos.
+                entorno. A Suíte Master, com 39,78 m² de área total e acesso ao terraço jardim privativo, traduz esse
+                conceito — um refúgio onde o dia começa e termina com cenários únicos.
               </p>
               <p>
                 Mais que uma residência, um convite para viver com exclusividade, contemplação e qualidade de vida.
