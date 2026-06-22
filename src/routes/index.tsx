@@ -56,7 +56,7 @@ export const Route = createFileRoute("/")({
 const gallery = [
   { src: fachadaPrincipal.url, label: "Fachada Principal", caption: "Volumetria contemporânea com brises de madeira e vidros de chão ao teto" },
   { src: fundosDia.url, label: "Fachada Posterior", caption: "Integração com o jardim e área de piscina" },
-  { src: living.url, label: "Living Pé-direito Duplo", caption: "Ampla lareira travertino e pé-direito duplo" },
+  { src: living.url, label: "Living Pé-direito Duplo", caption: "Ampla lareira e pé-direito duplo" },
   { src: fachadaFrente.url, label: "Acesso Principal", caption: "Pórtico em concreto e madeira" },
   { src: piscinaNoite.url, label: "Piscina — Anoitecer", caption: "Iluminação cênica e revestimento em pastilhas" },
   { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea com brises de madeira" },
@@ -77,7 +77,7 @@ const gallery = [
 ];
 
 const interiores = [
-  { src: int0085.url, label: "Living Social", caption: "Ampla lareira travertino e pé-direito duplo" },
+  { src: int0085.url, label: "Living Social", caption: "Ampla lareira e pé-direito duplo" },
   { src: int0087.url, label: "Estar Íntimo", caption: "Sofá curvo, painel em madeira e arte botânica" },
   { src: int0075.url, label: "Hall e Circulação", caption: "Escada em mármore e painel em madeira natural" },
   { src: int0070.url, label: "Área da Piscina", caption: "Deck em madeira e gourmet integrado" },
