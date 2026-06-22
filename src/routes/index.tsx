@@ -415,7 +415,7 @@ function Index() {
             <dl className="mt-12 space-y-5">
               {[
                 ["Segurança", "Portaria e ronda 24h"],
-                ["Lazer", "Clube, quadras e trilhas"],
+                ["Lazer", "Piscina, academia, quadras e salões de festa"],
                 ["Entorno", "Reserva de mata nativa"],
               ].map(([k, v]) => (
                 <div key={k} className="flex items-baseline justify-between border-b border-border pb-3">
@@ -440,29 +440,10 @@ function Index() {
           <h2 className="mt-8 max-w-4xl font-display text-5xl leading-[1.05] md:text-8xl">
             Conheça a Casa <em className="italic">Laussane</em> pessoalmente.
           </h2>
-          <p className="mt-10 max-w-xl text-base font-light text-background/70 md:text-lg">
-            Agende uma visita guiada ou solicite o material completo do imóvel com plantas,
-            ficha de acabamentos e condições de venda.
+          <p className="mt-10 max-w-2xl text-base font-light text-background/70 md:text-lg">
+            Agende uma visita guiada com a imobiliária de sua confiança e conheça pessoalmente
+            cada detalhe da Casa Laussane.
           </p>
-
-          <div className="mt-20 grid gap-12 border-t border-background/20 pt-16 md:grid-cols-3">
-            <div>
-              <p className="kicker text-background/50">WhatsApp</p>
-              <a href="https://wa.me/5551999043287" target="_blank" rel="noopener noreferrer" className="mt-4 block font-display text-2xl transition hover:text-background/70 md:text-3xl">
-                (51) 99904-3287
-              </a>
-            </div>
-            <div>
-              <p className="kicker text-background/50">E-mail</p>
-              <a href="#" className="mt-4 block font-display text-2xl transition hover:text-background/70 md:text-3xl">
-                contato@casalaussane.com
-              </a>
-            </div>
-            <div>
-              <p className="kicker text-background/50">Valor</p>
-              <p className="mt-4 font-display text-2xl md:text-3xl">Sob consulta</p>
-            </div>
-          </div>
         </div>
 
         <div className="border-t border-background/20">
