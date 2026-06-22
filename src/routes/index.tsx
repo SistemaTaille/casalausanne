@@ -112,7 +112,7 @@ const diferenciais = [
   { titulo: "Piso Aquecido", desc: "Aquecimento distribuído sob o piso dos ambientes íntimos e sociais — calor uniforme, sem correntes de ar, sem radiadores aparentes. Mais conforto térmico no inverno, eficiência energética e a sensação de pisar descalço em qualquer estação." },
   { titulo: "Automação Integrada", desc: "Ecossistema completo de iluminação, climatização, cortinas, fechaduras, sensores e monitoramento de energia, com cenas programadas (Cinema, Leitura, Boa-noite) e comando por aplicativo ou voz via Alexa, Google Assistente e Apple Casa (Siri). Gateways Zigbee com suporte a Matter garantem integração estável entre todos os dispositivos." },
   { titulo: "Duto de Roupas Sujas", desc: "Sistema integrado que conduz as roupas do segundo pavimento diretamente para a lavanderia no térreo, eliminando o transporte manual pelas escadas." },
-  { titulo: "Piscina com Deck", desc: "Piscina revestida em pastilhas com iluminação cênica, deck em madeira e área de lazer integrada ao living. Tratamento da água por clorador iGUi — água sempre cristalina, menor uso de produtos químicos e manutenção simplificada." },
+  { titulo: "Piscina com Deck", desc: "Piscina revestida em pastilhas com iluminação cênica, deck em madeira e piso atérmico ao redor — confortável aos pés mesmo sob o sol. Área de lazer integrada ao living e tratamento da água por clorador iGUi: água sempre cristalina, menor uso de produtos químicos e manutenção simplificada." },
   { titulo: "Pé-direito Duplo", desc: "Living social com vidros de chão ao teto e lareira revestida em mármore — luz natural e proporção generosa." },
 ];
 
