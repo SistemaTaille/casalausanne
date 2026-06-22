@@ -27,8 +27,8 @@ import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
 import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
 import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
 import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
-import plantaTerreo from "@/assets/planta-terreo.jpg.asset.json";
-import plantaSuperior from "@/assets/planta-superior.jpg.asset.json";
+import plantaTerreo from "@/assets/planta-terreo-v2.jpg.asset.json";
+import plantaSuperior from "@/assets/planta-superior-v2.jpg.asset.json";
 import porDoSolTerreno from "@/assets/por-do-sol-terreno.jpg.asset.json";
 
 const plantas = [
