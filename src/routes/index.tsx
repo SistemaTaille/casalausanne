@@ -545,12 +545,25 @@ function Index() {
           </div>
           <div
             className="flex flex-1 items-center justify-center overflow-hidden p-4 md:p-10"
+            style={{ touchAction: zoom > 1 ? "none" : "auto" }}
             onMouseMove={(e) => {
               if (zoom <= 1) return;
               const rect = e.currentTarget.getBoundingClientRect();
               const x = ((e.clientX - rect.left) / rect.width) * 100;
               const y = ((e.clientY - rect.top) / rect.height) * 100;
               setOrigin({ x, y });
+            }}
+            onTouchMove={(e) => {
+              if (zoom <= 1) return;
+              const t = e.touches[0];
+              if (!t) return;
+              const rect = e.currentTarget.getBoundingClientRect();
+              const x = ((t.clientX - rect.left) / rect.width) * 100;
+              const y = ((t.clientY - rect.top) / rect.height) * 100;
+              setOrigin({
+                x: Math.max(0, Math.min(100, x)),
+                y: Math.max(0, Math.min(100, y)),
+              });
             }}
           >
             <img
