@@ -90,10 +90,10 @@ const exteriores = [
   { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "Integração total entre área externa e cozinha gourmet" },
 ];
 
-const fichaTecnica = [
+const fichaTecnica: { label: string; value: string; unit: string; detalhe?: string }[] = [
   { label: "Área Construída", value: "290,98", unit: "m²" },
   { label: "Área do Terreno", value: "597,60", unit: "m²" },
-  { label: "Área Equivalente", value: "330,00", unit: "m²" },
+  { label: "Área Equivalente", value: "341,86", unit: "m²", detalhe: "290,98 casa + 15,78 terraço de jardim + 21 deck + 14,1 piscina" },
   { label: "Suítes", value: "03", unit: "" },
   { label: "Vagas", value: "02", unit: "" },
 ];
@@ -191,8 +191,8 @@ function Index() {
             </h2>
             <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-muted-foreground md:text-lg">
               A Casa Lausanne se ergue em meio à natureza do Condomínio Serra Azul. São 290,98 m² de construção
-              distribuídos em dois pavimentos, com pé-direito duplo no living, três suítes amplas, escritório e
-              integração total entre os ambientes sociais e a área externa com piscina.
+              e 341,86 m² de área equivalente, distribuídos em dois pavimentos, com pé-direito duplo no living,
+              três suítes amplas, escritório e integração total entre os ambientes sociais e a área externa com piscina.
             </p>
 
             <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
@@ -203,6 +203,9 @@ function Index() {
                     {item.value}
                     <span className="ml-1 text-xl text-muted-foreground">{item.unit}</span>
                   </p>
+                  {item.detalhe && (
+                    <p className="mt-2 text-xs font-light leading-relaxed text-muted-foreground">{item.detalhe}</p>
+                  )}
                 </div>
               ))}
             </div>
