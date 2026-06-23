@@ -1,4 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { useEffect, useState } from "react";
+import { ImageCarousel } from "@/components/ImageCarousel";
+
 const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
 const fachadaFrente = { url: "/assets/fachada-frente.jpg" };
 const fachadaLateral = { url: "/assets/fachada-lateral.jpg" };
