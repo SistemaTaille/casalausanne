@@ -42,7 +42,7 @@ const plantas = [
   { src: plantaSuperior.url, label: "Pavimento Superior", caption: "Três suítes amplas com varandas e closets" },
 ];
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/lausanne")({
   head: () => ({
     meta: [
       { title: "Casa Lausanne — Condomínio Serra Azul" },
@@ -54,7 +54,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: fachadaPrincipal.url },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "/lausanne" }],
   }),
   component: Index,
 });
