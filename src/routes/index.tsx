@@ -1,36 +1,38 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { ImageCarousel } from "@/components/ImageCarousel";
-import fachadaPrincipal from "@/assets/fachada-principal.jpg.asset.json";
-import fachadaFrente from "@/assets/fachada-frente.jpg.asset.json";
-import fachadaLateral from "@/assets/fachada-lateral.jpg.asset.json";
-import fundosDia from "@/assets/fundos-dia.jpg.asset.json";
-import living from "@/assets/living.jpg.asset.json";
-import piscinaNoite from "@/assets/piscina-noite.jpg.asset.json";
-import int0070 from "@/assets/interior-0070.jpg.asset.json";
-import int0074 from "@/assets/interior-0074.jpg.asset.json";
-import int0075 from "@/assets/interior-0075.jpg.asset.json";
-import int0078 from "@/assets/interior-0078.jpg.asset.json";
-import int0079 from "@/assets/interior-0079.jpg.asset.json";
-import int0084 from "@/assets/interior-0084.jpg.asset.json";
-import int0085 from "@/assets/interior-0085.jpg.asset.json";
-import int0086 from "@/assets/interior-0086.jpg.asset.json";
-import int0087 from "@/assets/interior-0087.jpg.asset.json";
-import int0089 from "@/assets/interior-0089.jpg.asset.json";
-import extEntardecer from "@/assets/ext-entardecer.jpg.asset.json";
-import extFrontalDia from "@/assets/ext-frontal-dia.jpg.asset.json";
-import extFrontalNoite from "@/assets/ext-frontal-noite.jpg.asset.json";
-import extFundosNoite from "@/assets/ext-fundos-noite.jpg.asset.json";
-import extGaragemDia from "@/assets/ext-garagem-dia.jpg.asset.json";
-import extLateralJardim from "@/assets/ext-lateral-jardim.jpg.asset.json";
-import extLateralMadeira from "@/assets/ext-lateral-madeira.jpg.asset.json";
-import extVolumetriaChamine from "@/assets/ext-volumetria-chamine.jpg.asset.json";
-import areaPiscinaDeck from "@/assets/area-piscina-deck.jpg.asset.json";
-import areaPiscinaGourmet from "@/assets/area-piscina-gourmet.jpg.asset.json";
-import plantaTerreo from "@/assets/planta-terreo-v4.jpg.asset.json";
-import livingSocialTv from "@/assets/living-social-tv.jpg.asset.json";
-import plantaSuperior from "@/assets/planta-superior-v2.jpg.asset.json";
-import porDoSolTerreno from "@/assets/por-do-sol-terreno.jpg.asset.json";
+import { createFileRoute } from '@tanstack/react-router'
+const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
+const fachadaFrente = { url: "/assets/fachada-frente.jpg" };
+const fachadaLateral = { url: "/assets/fachada-lateral.jpg" };
+const fundosDia = { url: "/assets/fundos-dia.jpg" };
+const living = { url: "/assets/living.jpg" };
+const piscinaNoite = { url: "/assets/piscina-noite.jpg" };
+
+const int0070 = { url: "/assets/interior-0070.jpg" };
+const int0074 = { url: "/assets/interior-0074.jpg" };
+const int0075 = { url: "/assets/interior-0075.jpg" };
+const int0078 = { url: "/assets/interior-0078.jpg" };
+const int0079 = { url: "/assets/interior-0079.jpg" };
+const int0084 = { url: "/assets/interior-0084.jpg" };
+const int0085 = { url: "/assets/interior-0085.jpg" };
+const int0086 = { url: "/assets/interior-0086.jpg" };
+const int0087 = { url: "/assets/interior-0087.jpg" };
+const int0089 = { url: "/assets/interior-0089.jpg" };
+
+const extEntardecer = { url: "/assets/ext-entardecer.jpg" };
+const extFrontalDia = { url: "/assets/ext-frontal-dia.jpg" };
+const extFrontalNoite = { url: "/assets/ext-frontal-noite.jpg" };
+const extFundosNoite = { url: "/assets/ext-fundos-noite.jpg" };
+const extGaragemDia = { url: "/assets/ext-garagem-dia.jpg" };
+const extLateralJardim = { url: "/assets/ext-lateral-jardim.jpg" };
+const extLateralMadeira = { url: "/assets/ext-lateral-madeira.jpg" };
+const extVolumetriaChamine = { url: "/assets/ext-volumetria-chamine.jpg" };
+
+const areaPiscinaDeck = { url: "/assets/area-piscina-deck.jpg" };
+const areaPiscinaGourmet = { url: "/assets/area-piscina-gourmet.jpg" };
+
+const plantaTerreo = { url: "/assets/planta-terreo-v4.jpg" };
+const livingSocialTv = { url: "/assets/living-social-tv.jpg" };
+const plantaSuperior = { url: "/assets/planta-superior-v2.jpg" };
+const porDoSolTerreno = { url: "/assets/por-do-sol-terreno.jpg" };
 
 const plantas = [
   { src: plantaTerreo.url, label: "Pavimento Térreo", caption: "Living, cozinha gourmet, área de piscina e garagem" },
