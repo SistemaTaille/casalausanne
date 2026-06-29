@@ -24,9 +24,9 @@ const extEntardecer = { url: "/assets/ext-entardecer.jpg" };
 const extFrontalDia = { url: "/assets/ext-frontal-dia.jpg" };
 const extFrontalNoite = { url: "/assets/ext-frontal-noite.jpg" };
 const extFundosNoite = { url: "/assets/ext-fundos-noite.jpg" };
-const extGaragemDia = { url: "/assets/ext-garagem-dia.jpg" };
+// const extGaragemDia = { url: "/assets/ext-garagem-dia.jpg" };
 const extLateralJardim = { url: "/assets/ext-lateral-jardim.jpg" };
-const extLateralMadeira = { url: "/assets/ext-lateral-madeira.jpg" };
+// const extLateralMadeira = { url: "/assets/ext-lateral-madeira.jpg" };
 const extVolumetriaChamine = { url: "/assets/ext-volumetria-chamine.jpg" };
 
 const areaPiscinaDeck = { url: "/assets/area-piscina-deck.jpg" };
@@ -65,20 +65,20 @@ const gallery = [
   { src: living.url, label: "Living Pé-direito Duplo", caption: "Ampla lareira e pé-direito duplo" },
   { src: fachadaFrente.url, label: "Acesso Principal", caption: "Pórtico em concreto e madeira" },
   { src: piscinaNoite.url, label: "Piscina — Anoitecer", caption: "Iluminação cênica e revestimento em pastilhas" },
-  { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea com brises de madeira" },
+  { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea" },
   // Interiores adicionais
-  { src: int0079.url, label: "Sala de Jantar", caption: "Mesa em madeira maciça com vista para a piscina" },
-  { src: int0089.url, label: "Jantar — Anoitecer", caption: "Pendente escultural e parede em mármore" },
-  { src: int0084.url, label: "Cozinha Gourmet", caption: "Ilha em mármore com bancada estendida para refeições" },
-  { src: int0078.url, label: "Cozinha — Detalhe", caption: "Marcenaria em carvalho e eletrodomésticos premium" },
-  { src: int0074.url, label: "Bancada de Refeições", caption: "Iluminação cênica e marcenaria ripada" },
+  { src: int0079.url, label: "Sala de Jantar", caption: "" }, // Mesa em madeira maciça com vista para a piscina
+  { src: int0089.url, label: "Jantar — Anoitecer", caption: "" }, // Pendente escultural e parede em mármore
+  { src: int0084.url, label: "Cozinha Gourmet", caption: "" }, // Ilha em mármore com bancada estendida para refeições
+  { src: int0078.url, label: "Cozinha — Detalhe", caption: "" }, // Marcenaria em carvalho e eletrodomésticos premium
+  { src: int0074.url, label: "Bancada de Refeições", caption: "" }, // Iluminação cênica e marcenaria ripada
   { src: int0086.url, label: "Cozinha Integrada", caption: "Vista para piscina e área externa" },
   // Exteriores adicionais
   { src: extFrontalNoite.url, label: "Fachada Frontal — Noite", caption: "Iluminação cênica integrada à arquitetura" },
   { src: extFundosNoite.url, label: "Fundos — Anoitecer", caption: "Pedra natural, piscina iluminada e jardim tropical" },
-  { src: extGaragemDia.url, label: "Acesso e Garagem", caption: "Pé-direito generoso e marcenaria em madeira no teto" },
+  // { src: extGaragemDia.url, label: "Acesso e Garagem", caption: "Pé-direito generoso e marcenaria em madeira no teto" },
   { src: extLateralJardim.url, label: "Lateral — Jardim", caption: "Volumes em concreto sobre o gramado e mata nativa" },
-  { src: extLateralMadeira.url, label: "Lateral — Painel em Madeira", caption: "Brises ripados e jardineiras suspensas" },
+  // { src: extLateralMadeira.url, label: "Lateral — Painel em Madeira", caption: "Brises ripados e jardineiras suspensas" },
   { src: extVolumetriaChamine.url, label: "Volumetria — Chaminé", caption: "Geometria contemporânea com janelas em fita" },
 ];
 
