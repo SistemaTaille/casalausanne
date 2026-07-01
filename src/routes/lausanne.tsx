@@ -235,9 +235,7 @@ function Index() {
               </p>
               <p>
                 Mais que uma residência, um convite para viver com exclusividade, contemplação e qualidade de vida.
-                São 328,18 m² de área equivalente, distribuídos em dois pavimentos, com pé-direito duplo no living,
-                quatro suítes amplas, escritório e integração total entre os ambientes sociais e a área externa com
-                piscina.
+                São 328,18 m² de área equivalente, distribuídos em dois pavimentos, com pé-direito duplo no living, três suítes amplas do pavimento superior, uma suíte/escritório no pavimento inferior e integração total entre os ambientes sociais e a área externa com piscina.
               </p>
             </div>
 
