@@ -588,23 +588,57 @@ function Index() {
         </div>
       </section>
 
-      {/* Contato */}
+      {/* Contato — Encerramento do dossiê */}
       <section id="contato" className="bg-foreground text-background">
-        <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
-          <p className="kicker text-background/60">Contato</p>
-          <h2 className="mt-8 max-w-4xl font-display text-5xl leading-[1.05] md:text-8xl">
-            Conheça a Casa <em className="italic">Lausanne</em> pessoalmente.
-          </h2>
-          <p className="mt-10 max-w-2xl text-base font-light text-background/70 md:text-lg">
-            Agende uma visita guiada com a imobiliária de sua confiança e conheça pessoalmente
-            cada detalhe da Casa Lausanne.
-          </p>
+        <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-12 md:py-32">
+          <div className="mb-10 flex flex-wrap items-baseline justify-between gap-4 border-b border-background/20 pb-6">
+            <p className="mono-label text-background/70">§ 09 · Contato</p>
+            <p className="mono-label text-background/40">Encerramento · Prancha 09 / 09</p>
+          </div>
+
+          <div className="grid gap-12 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-8">
+              <h2 className="max-w-3xl font-display text-5xl leading-[1.05] md:text-7xl">
+                Conheça a Casa <em className="italic">Lausanne</em> pessoalmente.
+              </h2>
+              <div className="mt-6 h-px w-16 bg-gold" />
+              <p className="mt-8 max-w-2xl text-base font-light text-background/70 md:text-lg">
+                Agende uma visita guiada com a imobiliária de sua confiança e conheça pessoalmente
+                cada detalhe da Casa Lausanne.
+              </p>
+              <a
+                href="#topo"
+                className="mono-label mt-12 inline-flex items-center gap-3 border border-background/40 px-6 py-3 text-background transition hover:border-gold hover:bg-gold hover:text-foreground"
+              >
+                Agendar visita
+                <span aria-hidden>→</span>
+              </a>
+            </div>
+
+            <div className="md:col-span-4">
+              <dl className="space-y-5 border-t border-background/20 pt-6">
+                {[
+                  ["Referência", "LSN—001 / 2026"],
+                  ["Documento", "Dossiê da residência"],
+                  ["Projeto", "Paulo Lopes Arquiteto"],
+                  ["Emissão", new Date().getFullYear().toString()],
+                ].map(([k, v]) => (
+                  <div key={k} className="flex flex-col gap-1.5">
+                    <dt className="mono-label text-background/50">{k}</dt>
+                    <dd className="mono-value text-background">{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
         </div>
 
         <div className="border-t border-background/20">
-          <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-8 text-xs text-background/50 md:flex-row md:items-center md:justify-between md:px-12">
-            <p>© {new Date().getFullYear()} Casa Lausanne · Condomínio Serra Azul</p>
-            <p className="kicker">Projeto · Paulo Lopes Arquiteto</p>
+          <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between md:px-12">
+            <p className="mono-label text-background/50">
+              © {new Date().getFullYear()} Casa Lausanne · Condomínio Serra Azul
+            </p>
+            <p className="mono-label text-background/50">Documento LSN—001 · Versão 1.0</p>
           </div>
         </div>
       </section>
