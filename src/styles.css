@@ -31,6 +31,7 @@
   --color-gold-deep: var(--gold-deep);
   --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
   --font-sans: 'Karla', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
 }
 
 :root {
