@@ -144,8 +144,6 @@ function Index() {
 
   // Parallax do hero
   const [heroY, setHeroY] = useState(0);
-  const [heroMuted, setHeroMuted] = useState(true);
-  const heroVideoRef = useRef<HTMLVideoElement | null>(null);
   useEffect(() => {
     const onScroll = () => setHeroY(window.scrollY * 0.35);
     window.addEventListener("scroll", onScroll, { passive: true });
