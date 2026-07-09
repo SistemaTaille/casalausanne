@@ -192,7 +192,7 @@ function Index() {
           scrolled ? "bg-background/85 backdrop-blur-md py-4 border-b border-border/60" : "py-8"
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-12 px-6 md:gap-16 md:px-12">
           <a href="#topo" className="font-display text-xl tracking-tight whitespace-nowrap">Casa Lausanne</a>
           <nav className="hidden gap-10 md:flex">
             {[
@@ -204,7 +204,6 @@ function Index() {
               ["Plantas", "plantas"],
               ["Diferenciais", "diferenciais"],
               ["Localização", "localizacao"],
-              ["Contato", "contato"],
             ].map(([label, id]) => (
               <a key={id} href={`#${id}`} className="kicker text-foreground/70 transition hover:text-foreground">
                 {label}
@@ -215,6 +214,7 @@ function Index() {
             Agendar Visita
           </a>
         </div>
+
       </header>
 
       {/* Hero */}
