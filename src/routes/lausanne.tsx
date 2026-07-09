@@ -160,135 +160,54 @@ function Index() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Barra superior do dossiê */}
-      <div className="border-b border-border bg-background">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6 px-6 py-2.5 md:px-12">
-          <div className="flex items-center gap-6 mono-label">
-            <span>Dossiê · LSN—001 / 2026</span>
-            <span className="hidden text-foreground/40 md:inline">·</span>
-            <span className="hidden md:inline">Ref · Casa Lausanne</span>
-          </div>
-          <div className="mono-label hidden items-center gap-6 md:flex">
-            <span>28°23′S 49°12′W</span>
-            <span className="text-foreground/40">·</span>
-            <span>Alt. 928 m</span>
-          </div>
-        </div>
-      </div>
-
       {/* Nav */}
       <header
-        className={`sticky top-0 z-50 w-full border-b border-border transition-all duration-300 ${
-          scrolled ? "bg-background/95 backdrop-blur-md py-3" : "bg-background py-5"
+        className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+          scrolled ? "bg-background/85 backdrop-blur-md py-4 border-b border-border/60" : "py-8"
         }`}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12">
-          <a href="#topo" className="flex items-baseline gap-3">
-            <span className="font-display text-xl leading-none">Casa Lausanne</span>
-            <span className="mono-label hidden sm:inline">arquivo</span>
-          </a>
-          <nav className="hidden gap-6 lg:flex">
+          <a href="#topo" className="font-display text-xl tracking-tight">Casa Lausanne</a>
+          <nav className="hidden gap-10 md:flex">
             {[
-              ["Imóvel", "imovel", "01"],
-              ["Terreno", "terreno", "02"],
-              ["Exteriores", "exteriores", "03"],
-              ["Interiores", "interiores", "04"],
-              ["Galeria", "galeria", "05"],
-              ["Plantas", "plantas", "06"],
-              ["Diferenciais", "diferenciais", "07"],
-              ["Localização", "localizacao", "08"],
-            ].map(([label, id, num]) => (
-              <a
-                key={id}
-                href={`#${id}`}
-                className="group flex items-baseline gap-1.5 text-sm text-foreground/75 transition hover:text-foreground"
-              >
-                <span className="mono text-[0.65rem] tracking-wider text-foreground/40 group-hover:text-gold">
-                  §{num}
-                </span>
-                <span className="font-light">{label}</span>
+              ["O Imóvel", "imovel"],
+              ["O Terreno", "terreno"],
+              ["Exteriores", "exteriores"],
+              ["Interiores", "interiores"],
+              ["Galeria", "galeria"],
+              ["Plantas", "plantas"],
+              ["Diferenciais", "diferenciais"],
+              ["Localização", "localizacao"],
+              ["Contato", "contato"],
+            ].map(([label, id]) => (
+              <a key={id} href={`#${id}`} className="kicker text-foreground/70 transition hover:text-foreground">
+                {label}
               </a>
             ))}
           </nav>
-          <a
-            href="#contato"
-            className="mono-label border border-foreground bg-foreground px-4 py-2 text-background transition hover:bg-gold hover:border-gold hover:text-foreground"
-          >
-            Agendar visita →
+          <a href="#contato" className="kicker hidden border-b border-foreground pb-1 md:inline-block">
+            Agendar Visita
           </a>
         </div>
       </header>
 
-      {/* Hero — Capa do dossiê */}
-      <section id="topo" className="border-b border-border bg-background">
-        <div className="mx-auto max-w-[1600px] px-6 pt-12 pb-16 md:px-12 md:pt-20 md:pb-24">
-          {/* Cabeçalho da capa */}
-          <div className="mb-10 flex flex-wrap items-baseline justify-between gap-4 border-b border-border pb-6">
-            <div className="mono-label flex flex-wrap items-baseline gap-x-6 gap-y-2">
-              <span>Documento · 001 / 07</span>
-              <span className="text-foreground/40 hidden md:inline">·</span>
-              <span>Residência unifamiliar</span>
-              <span className="text-foreground/40 hidden md:inline">·</span>
-              <span>Condomínio Serra Azul</span>
-            </div>
-            <span className="mono-label text-gold">Alto padrão</span>
-          </div>
-
-          <div className="grid gap-12 md:grid-cols-12 md:gap-10">
-            {/* Coluna esquerda — Título e metadados */}
-            <div className="md:col-span-5 md:pr-4">
-              <p className="mono-label mb-8">§ 00 · Capa</p>
-              <h1 className="font-display text-6xl leading-[0.95] md:text-8xl">
-                Casa
-                <br />
-                <em className="italic font-normal">Lausanne</em>
-              </h1>
-              <div className="mt-8 h-px w-16 bg-gold" />
-              <p className="mt-8 max-w-md text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-                Arquitetura contemporânea, materiais nobres e uma relação contínua com a paisagem da serra.
-              </p>
-
-              {/* Ficha resumida — dados chave em mono */}
-              <dl className="mt-12 grid grid-cols-2 gap-x-8 gap-y-5 border-t border-border pt-8">
-                {[
-                  ["Endereço", "Rua Alpes Suíços"],
-                  ["Coordenadas", "28°23′S 49°12′W"],
-                  ["Altitude", "928 m"],
-                  ["Orientação", "Norte / Poente"],
-                  ["Arquiteto", "Paulo Lopes"],
-                  ["Entrega", "2026"],
-                ].map(([k, v]) => (
-                  <div key={k} className="flex flex-col gap-1.5">
-                    <dt className="mono-label">{k}</dt>
-                    <dd className="mono-value">{v}</dd>
-                  </div>
-                ))}
-              </dl>
-
-              <div className="mt-10 flex items-center gap-4">
-                <a href="#imovel" className="mono-label flex items-center gap-2 text-foreground transition hover:text-gold">
-                  <span className="inline-block h-px w-10 bg-current" />
-                  Abrir dossiê
-                </a>
-              </div>
-            </div>
-
-            {/* Coluna direita — Imagem em frame */}
-            <div className="md:col-span-7">
-              <figure className="relative">
-                <div className="border border-border p-3 md:p-4">
-                  <img
-                    src={fachadaPrincipal.url}
-                    alt="Casa Lausanne — fachada principal"
-                    className="aspect-[4/5] w-full object-cover md:aspect-[5/6]"
-                  />
-                </div>
-                <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-                  <span className="mono-label">Fig. 001 · Fachada principal</span>
-                  <span className="mono-label text-foreground/50">Registro fotográfico</span>
-                </figcaption>
-              </figure>
-            </div>
+      {/* Hero */}
+      <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden">
+        <img src={fachadaPrincipal.url} alt="Casa Lausanne — fachada principal" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+        <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
+          <p className="kicker mb-6 text-sm text-white tracking-[0.22em] font-medium">Condomínio Serra Azul</p>
+          <h1 className="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.95] text-white">
+            Casa<br />
+            <em className="not-italic font-normal italic">Lausanne</em>
+          </h1>
+          <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
+            <p className="max-w-md text-base font-light text-white/90 md:text-lg">
+              Arquitetura contemporânea, materiais nobres e uma relação contínua com a paisagem da serra.
+            </p>
+            <a href="#imovel" className="kicker text-white/85 transition hover:text-white">
+              Descer ↓
+            </a>
           </div>
         </div>
       </section>
@@ -297,7 +216,7 @@ function Index() {
       <section id="imovel" className="border-b border-border">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-4">
-            <p className="mono-label">§ 01 · O Imóvel <span className="ml-4 text-foreground/40">Prancha 01 / 08</span></p>
+            <p className="kicker text-muted-foreground">01 — O Imóvel</p>
           </div>
           <div className="md:col-span-8">
             <h2 className="font-display text-4xl leading-tight md:text-6xl">
@@ -351,55 +270,43 @@ function Index() {
 
       {/* O Terreno */}
       <section id="terreno" className="border-b border-border bg-secondary/40">
-        <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-12 md:py-32">
-          <div className="mb-12 flex flex-wrap items-baseline justify-between gap-4 border-b border-border pb-6">
-            <p className="mono-label">§ 02 · O Terreno</p>
-            <p className="mono-label text-foreground/50">Prancha 02 / 08</p>
+        <div className="relative">
+          <img
+            src={porDoSolTerreno.url}
+            alt="Pôr do sol visto do terreno da Casa Lausanne"
+            className="h-[60vh] min-h-[420px] w-full object-cover md:h-[85vh]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1600px] flex-col justify-end px-6 pb-12 md:px-12 md:pb-20">
+            <p className="kicker text-white/85">02 — O Terreno</p>
+            <h2 className="mt-6 max-w-4xl font-display text-3xl leading-[1.05] text-white md:text-6xl">
+              O privilégio de um <em className="italic">pôr do sol</em> que nunca será interrompido.
+            </h2>
           </div>
-
-          <div className="grid gap-12 md:grid-cols-12 md:gap-10">
-            <div className="md:col-span-5">
-              <h2 className="font-display text-4xl leading-[1.05] md:text-6xl">
-                O privilégio de um <em className="italic">pôr do sol</em> que nunca será interrompido.
-              </h2>
-              <div className="mt-6 h-px w-16 bg-gold" />
-              <p className="mt-8 max-w-md text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-                Implantado em ponto privilegiado do Condomínio Serra Azul, o terreno garante vista aberta para
-                o horizonte e um pôr do sol contemplado todos os dias — sem construções que possam interromper
-                a paisagem no futuro.
-              </p>
-
-              <dl className="mt-12 grid grid-cols-3 gap-x-4 gap-y-6 border-t border-border pt-8">
-                {[
-                  { label: "Testada", value: "14,94", unit: "m" },
-                  { label: "Profundidade", value: "40,00", unit: "m" },
-                  { label: "Área Total", value: "597,60", unit: "m²" },
-                ].map((item) => (
-                  <div key={item.label} className="flex flex-col gap-2">
-                    <dt className="mono-label">{item.label}</dt>
-                    <dd className="font-display text-3xl leading-none md:text-4xl">
-                      {item.value}
-                      <span className="ml-1 mono text-xs text-muted-foreground">{item.unit}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
-            <div className="md:col-span-7">
-              <figure className="relative">
-                <div className="border border-border p-3 md:p-4 bg-background">
-                  <img
-                    src={porDoSolTerreno.url}
-                    alt="Pôr do sol visto do terreno da Casa Lausanne"
-                    className="aspect-[4/3] w-full object-cover md:aspect-[4/3]"
-                  />
+        </div>
+        <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-20 md:grid-cols-12 md:px-12 md:py-28">
+          <div className="md:col-span-5">
+            <p className="text-base font-light leading-relaxed text-muted-foreground md:text-lg">
+              Implantado em ponto privilegiado do Condomínio Serra Azul, o terreno garante vista aberta para
+              o horizonte e um pôr do sol contemplado todos os dias — sem construções que possam interromper
+              a paisagem no futuro.
+            </p>
+          </div>
+          <div className="md:col-span-7">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3">
+              {[
+                { label: "Testada", value: "14,94", unit: "m" },
+                { label: "Profundidade", value: "40,00", unit: "m" },
+                { label: "Área Total", value: "597,60", unit: "m²" },
+              ].map((item) => (
+                <div key={item.label} className="border-t border-foreground pt-4">
+                  <p className="kicker text-muted-foreground">{item.label}</p>
+                  <p className="mt-3 font-display text-3xl md:text-5xl">
+                    {item.value}
+                    <span className="ml-1 text-xl text-muted-foreground">{item.unit}</span>
+                  </p>
                 </div>
-                <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-                  <span className="mono-label">Fig. 002 · Pôr do sol · Registro do terreno</span>
-                  <span className="mono-label text-foreground/50">28°23′S 49°12′W</span>
-                </figcaption>
-              </figure>
+              ))}
             </div>
           </div>
         </div>
@@ -410,7 +317,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-12 flex items-end justify-between gap-8">
             <div>
-              <p className="mono-label">§ 03 · Exteriores <span className="ml-4 text-foreground/40">Prancha 03 / 08</span></p>
+              <p className="kicker text-muted-foreground">03 — Exteriores</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">
                 <em className="italic">Arquitetura</em>
               </h2>
@@ -443,7 +350,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-12 flex items-end justify-between gap-8">
             <div>
-              <p className="mono-label">§ 04 · Interiores <span className="ml-4 text-foreground/40">Prancha 04 / 08</span></p>
+              <p className="kicker text-muted-foreground">04 — Interiores</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">
                 <em className="italic">Ambientes</em>
               </h2>
@@ -480,7 +387,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-20 flex items-end justify-between gap-8">
             <div>
-              <p className="mono-label">§ 05 · Galeria <span className="ml-4 text-foreground/40">Prancha 05 / 08</span></p>
+              <p className="kicker text-muted-foreground">05 — Galeria</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">Os ambientes</h2>
             </div>
             <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
@@ -497,7 +404,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-16 flex items-end justify-between gap-8">
             <div>
-              <p className="mono-label">§ 06 · Plantas <span className="ml-4 text-foreground/40">Prancha 06 / 08</span></p>
+              <p className="kicker text-muted-foreground">06 — Plantas</p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">Plantas baixas</h2>
             </div>
             <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
@@ -534,7 +441,7 @@ function Index() {
       <section id="diferenciais" className="border-b border-border">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-4">
-            <p className="mono-label">§ 07 · Diferenciais <span className="ml-4 text-foreground/40">Prancha 07 / 08</span></p>
+            <p className="kicker text-muted-foreground">07 — Diferenciais</p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-5xl">
               O que faz a Lausanne <em className="italic">única</em>.
             </h2>
@@ -559,7 +466,7 @@ function Index() {
       <section id="localizacao" className="border-b border-border bg-secondary/40">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-5">
-            <p className="mono-label">§ 08 · Localização <span className="ml-4 text-foreground/40">Prancha 08 / 08</span></p>
+            <p className="kicker text-muted-foreground">08 — Localização</p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
               Condomínio<br /><em className="italic">Serra Azul</em>
             </h2>
@@ -588,57 +495,23 @@ function Index() {
         </div>
       </section>
 
-      {/* Contato — Encerramento do dossiê */}
+      {/* Contato */}
       <section id="contato" className="bg-foreground text-background">
-        <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-12 md:py-32">
-          <div className="mb-10 flex flex-wrap items-baseline justify-between gap-4 border-b border-background/20 pb-6">
-            <p className="mono-label text-background/70">§ 09 · Contato</p>
-            <p className="mono-label text-background/40">Encerramento · Prancha 09 / 09</p>
-          </div>
-
-          <div className="grid gap-12 md:grid-cols-12 md:gap-10">
-            <div className="md:col-span-8">
-              <h2 className="max-w-3xl font-display text-5xl leading-[1.05] md:text-7xl">
-                Conheça a Casa <em className="italic">Lausanne</em> pessoalmente.
-              </h2>
-              <div className="mt-6 h-px w-16 bg-gold" />
-              <p className="mt-8 max-w-2xl text-base font-light text-background/70 md:text-lg">
-                Agende uma visita guiada com a imobiliária de sua confiança e conheça pessoalmente
-                cada detalhe da Casa Lausanne.
-              </p>
-              <a
-                href="#topo"
-                className="mono-label mt-12 inline-flex items-center gap-3 border border-background/40 px-6 py-3 text-background transition hover:border-gold hover:bg-gold hover:text-foreground"
-              >
-                Agendar visita
-                <span aria-hidden>→</span>
-              </a>
-            </div>
-
-            <div className="md:col-span-4">
-              <dl className="space-y-5 border-t border-background/20 pt-6">
-                {[
-                  ["Referência", "LSN—001 / 2026"],
-                  ["Documento", "Dossiê da residência"],
-                  ["Projeto", "Paulo Lopes Arquiteto"],
-                  ["Emissão", new Date().getFullYear().toString()],
-                ].map(([k, v]) => (
-                  <div key={k} className="flex flex-col gap-1.5">
-                    <dt className="mono-label text-background/50">{k}</dt>
-                    <dd className="mono-value text-background">{v}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
+        <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
+          <p className="kicker text-background/60">Contato</p>
+          <h2 className="mt-8 max-w-4xl font-display text-5xl leading-[1.05] md:text-8xl">
+            Conheça a Casa <em className="italic">Lausanne</em> pessoalmente.
+          </h2>
+          <p className="mt-10 max-w-2xl text-base font-light text-background/70 md:text-lg">
+            Agende uma visita guiada com a imobiliária de sua confiança e conheça pessoalmente
+            cada detalhe da Casa Lausanne.
+          </p>
         </div>
 
         <div className="border-t border-background/20">
-          <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between md:px-12">
-            <p className="mono-label text-background/50">
-              © {new Date().getFullYear()} Casa Lausanne · Condomínio Serra Azul
-            </p>
-            <p className="mono-label text-background/50">Documento LSN—001 · Versão 1.0</p>
+          <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-8 text-xs text-background/50 md:flex-row md:items-center md:justify-between md:px-12">
+            <p>© {new Date().getFullYear()} Casa Lausanne · Condomínio Serra Azul</p>
+            <p className="kicker">Projeto · Paulo Lopes Arquiteto</p>
           </div>
         </div>
       </section>
