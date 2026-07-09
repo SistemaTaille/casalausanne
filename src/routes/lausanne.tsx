@@ -362,7 +362,7 @@ function Index() {
                 <em className="italic">Arquitetura</em>
               </h2>
             </div>
-            <p className="hidden text-sm text-muted-foreground md:block">{exteriores.length} imagens</p>
+            
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             {exteriores.map((img) => (
