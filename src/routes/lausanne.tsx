@@ -40,16 +40,16 @@ const porDoSolTerreno = { url: "/assets/por-do-sol-terreno.jpg" };
 
 const plantas = [
   { src: plantaTerreo.url, label: "Pavimento Térreo", caption: "Living, cozinha gourmet, área de piscina e garagem" },
-  { src: plantaSuperior.url, label: "Pavimento Superior", caption: "Quatro suítes amplas com varandas e closets" },
+  { src: plantaSuperior.url, label: "Pavimento Superior", caption: "Três suítes amplas com varandas e closets" },
 ];
 
 export const Route = createFileRoute("/lausanne")({
   head: () => ({
     meta: [
       { title: "Casa Lausanne — Condomínio Serra Azul" },
-      { name: "description", content: "Residência contemporânea de alto padrão no Condomínio Serra Azul. 290,98 m² construídos, 4 suítes, piscina, automação e piso aquecido." },
+      { name: "description", content: "Residência contemporânea de alto padrão no Condomínio Serra Azul. 290,98 m² construídos, 3 suítes, piscina, automação e piso aquecido." },
       { property: "og:title", content: "Casa Lausanne — Condomínio Serra Azul" },
-      { property: "og:description", content: "Residência contemporânea de alto padrão. 290,98 m² construídos, 4 suítes, piscina, automação." },
+      { property: "og:description", content: "Residência contemporânea de alto padrão. 290,98 m² construídos, 3 suítes, piscina, automação." },
       { property: "og:type", content: "website" },
       { property: "og:image", content: fachadaPrincipal.url },
       { name: "twitter:card", content: "summary_large_image" },
