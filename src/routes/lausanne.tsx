@@ -137,8 +137,33 @@ function Index() {
   const [origin, setOrigin] = useState({ x: 50, y: 50 });
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Parallax do hero
+  const [heroY, setHeroY] = useState(0);
+  useEffect(() => {
+    const onScroll = () => setHeroY(window.scrollY * 0.35);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Reveal-on-scroll
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -80px 0px" }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    return () => io.disconnect();
   }, []);
   useEffect(() => {
     if (!lightbox) return;
