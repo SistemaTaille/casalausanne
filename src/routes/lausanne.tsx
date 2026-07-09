@@ -252,7 +252,7 @@ function Index() {
             <p className="kicker text-muted-foreground">01 — O Imóvel</p>
           </div>
           <div className="md:col-span-8">
-            <h2 className="font-display text-4xl leading-tight md:text-6xl">
+            <h2 className="reveal font-display text-4xl leading-tight md:text-6xl">
               Inspirada em <em className="italic">Lausanne</em>, na Suíça — uma das cidades mais encantadoras às margens do Lago Léman.
             </h2>
             <div className="mt-10 max-w-2xl space-y-6 text-base font-light leading-relaxed text-muted-foreground md:text-lg">
