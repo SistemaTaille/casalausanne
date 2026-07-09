@@ -297,7 +297,7 @@ function Index() {
       <section id="imovel" className="border-b border-border">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-4">
-            <p className="kicker text-muted-foreground">01 — O Imóvel</p>
+            <p className="mono-label">§ 01 · O Imóvel <span className="ml-4 text-foreground/40">Prancha 01 / 08</span></p>
           </div>
           <div className="md:col-span-8">
             <h2 className="font-display text-4xl leading-tight md:text-6xl">
@@ -410,7 +410,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-12 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">03 — Exteriores</p>
+              <p className="mono-label">§ 03 · Exteriores <span className="ml-4 text-foreground/40">Prancha 03 / 08</span></p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">
                 <em className="italic">Arquitetura</em>
               </h2>
@@ -443,7 +443,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-12 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">04 — Interiores</p>
+              <p className="mono-label">§ 04 · Interiores <span className="ml-4 text-foreground/40">Prancha 04 / 08</span></p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">
                 <em className="italic">Ambientes</em>
               </h2>
@@ -480,7 +480,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-20 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">05 — Galeria</p>
+              <p className="mono-label">§ 05 · Galeria <span className="ml-4 text-foreground/40">Prancha 05 / 08</span></p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">Os ambientes</h2>
             </div>
             <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
@@ -497,7 +497,7 @@ function Index() {
         <div className="mx-auto max-w-[1600px] px-6 py-28 md:px-12 md:py-40">
           <div className="mb-16 flex items-end justify-between gap-8">
             <div>
-              <p className="kicker text-muted-foreground">06 — Plantas</p>
+              <p className="mono-label">§ 06 · Plantas <span className="ml-4 text-foreground/40">Prancha 06 / 08</span></p>
               <h2 className="mt-6 font-display text-4xl md:text-6xl">Plantas baixas</h2>
             </div>
             <p className="hidden max-w-xs text-sm text-muted-foreground md:block">
@@ -534,7 +534,7 @@ function Index() {
       <section id="diferenciais" className="border-b border-border">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-4">
-            <p className="kicker text-muted-foreground">07 — Diferenciais</p>
+            <p className="mono-label">§ 07 · Diferenciais <span className="ml-4 text-foreground/40">Prancha 07 / 08</span></p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-5xl">
               O que faz a Lausanne <em className="italic">única</em>.
             </h2>
@@ -559,7 +559,7 @@ function Index() {
       <section id="localizacao" className="border-b border-border bg-secondary/40">
         <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
           <div className="md:col-span-5">
-            <p className="kicker text-muted-foreground">08 — Localização</p>
+            <p className="mono-label">§ 08 · Localização <span className="ml-4 text-foreground/40">Prancha 08 / 08</span></p>
             <h2 className="mt-6 font-display text-4xl leading-tight md:text-6xl">
               Condomínio<br /><em className="italic">Serra Azul</em>
             </h2>
