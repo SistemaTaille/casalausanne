@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useRef, useState } from "react";
 import { ImageCarousel } from "@/components/ImageCarousel";
-import heroVideo from "@/assets/hero-fachada.mp4.asset.json";
+
 
 const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
 const fachadaFrente = { url: "/assets/fachada-frente.jpg" };
@@ -219,13 +219,9 @@ function Index() {
 
       {/* Hero */}
       <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-foreground">
-        <video
-          src={heroVideo.url}
-          poster={fachadaPrincipal.url}
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src={fachadaPrincipal.url}
+          alt="Fachada principal da Casa Lausanne"
           className="absolute inset-0 h-[120%] w-full object-cover will-change-transform"
           style={{ transform: `translate3d(0, ${heroY}px, 0)` }}
         />
