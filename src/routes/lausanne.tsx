@@ -270,55 +270,43 @@ function Index() {
 
       {/* O Terreno */}
       <section id="terreno" className="border-b border-border bg-secondary/40">
-        <div className="mx-auto max-w-[1600px] px-6 py-24 md:px-12 md:py-32">
-          <div className="mb-12 flex flex-wrap items-baseline justify-between gap-4 border-b border-border pb-6">
-            <p className="mono-label">§ 02 · O Terreno</p>
-            <p className="mono-label text-foreground/50">Prancha 02 / 08</p>
+        <div className="relative">
+          <img
+            src={porDoSolTerreno.url}
+            alt="Pôr do sol visto do terreno da Casa Lausanne"
+            className="h-[60vh] min-h-[420px] w-full object-cover md:h-[85vh]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
+          <div className="absolute inset-0 mx-auto flex max-w-[1600px] flex-col justify-end px-6 pb-12 md:px-12 md:pb-20">
+            <p className="kicker text-white/85">02 — O Terreno</p>
+            <h2 className="mt-6 max-w-4xl font-display text-3xl leading-[1.05] text-white md:text-6xl">
+              O privilégio de um <em className="italic">pôr do sol</em> que nunca será interrompido.
+            </h2>
           </div>
-
-          <div className="grid gap-12 md:grid-cols-12 md:gap-10">
-            <div className="md:col-span-5">
-              <h2 className="font-display text-4xl leading-[1.05] md:text-6xl">
-                O privilégio de um <em className="italic">pôr do sol</em> que nunca será interrompido.
-              </h2>
-              <div className="mt-6 h-px w-16 bg-gold" />
-              <p className="mt-8 max-w-md text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-                Implantado em ponto privilegiado do Condomínio Serra Azul, o terreno garante vista aberta para
-                o horizonte e um pôr do sol contemplado todos os dias — sem construções que possam interromper
-                a paisagem no futuro.
-              </p>
-
-              <dl className="mt-12 grid grid-cols-3 gap-x-4 gap-y-6 border-t border-border pt-8">
-                {[
-                  { label: "Testada", value: "14,94", unit: "m" },
-                  { label: "Profundidade", value: "40,00", unit: "m" },
-                  { label: "Área Total", value: "597,60", unit: "m²" },
-                ].map((item) => (
-                  <div key={item.label} className="flex flex-col gap-2">
-                    <dt className="mono-label">{item.label}</dt>
-                    <dd className="font-display text-3xl leading-none md:text-4xl">
-                      {item.value}
-                      <span className="ml-1 mono text-xs text-muted-foreground">{item.unit}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
-            <div className="md:col-span-7">
-              <figure className="relative">
-                <div className="border border-border p-3 md:p-4 bg-background">
-                  <img
-                    src={porDoSolTerreno.url}
-                    alt="Pôr do sol visto do terreno da Casa Lausanne"
-                    className="aspect-[4/3] w-full object-cover md:aspect-[4/3]"
-                  />
+        </div>
+        <div className="mx-auto grid max-w-[1600px] gap-16 px-6 py-20 md:grid-cols-12 md:px-12 md:py-28">
+          <div className="md:col-span-5">
+            <p className="text-base font-light leading-relaxed text-muted-foreground md:text-lg">
+              Implantado em ponto privilegiado do Condomínio Serra Azul, o terreno garante vista aberta para
+              o horizonte e um pôr do sol contemplado todos os dias — sem construções que possam interromper
+              a paisagem no futuro.
+            </p>
+          </div>
+          <div className="md:col-span-7">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3">
+              {[
+                { label: "Testada", value: "14,94", unit: "m" },
+                { label: "Profundidade", value: "40,00", unit: "m" },
+                { label: "Área Total", value: "597,60", unit: "m²" },
+              ].map((item) => (
+                <div key={item.label} className="border-t border-foreground pt-4">
+                  <p className="kicker text-muted-foreground">{item.label}</p>
+                  <p className="mt-3 font-display text-3xl md:text-5xl">
+                    {item.value}
+                    <span className="ml-1 text-xl text-muted-foreground">{item.unit}</span>
+                  </p>
                 </div>
-                <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-                  <span className="mono-label">Fig. 002 · Pôr do sol · Registro do terreno</span>
-                  <span className="mono-label text-foreground/50">28°23′S 49°12′W</span>
-                </figcaption>
-              </figure>
+              ))}
             </div>
           </div>
         </div>
