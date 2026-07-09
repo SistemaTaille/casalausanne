@@ -137,8 +137,33 @@ function Index() {
   const [origin, setOrigin] = useState({ x: 50, y: 50 });
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Parallax do hero
+  const [heroY, setHeroY] = useState(0);
+  useEffect(() => {
+    const onScroll = () => setHeroY(window.scrollY * 0.35);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Reveal-on-scroll
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -80px 0px" }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    return () => io.disconnect();
   }, []);
   useEffect(() => {
     if (!lightbox) return;
@@ -167,7 +192,7 @@ function Index() {
         }`}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12">
-          <a href="#topo" className="font-display text-xl tracking-tight">Casa Lausanne</a>
+          <a href="#topo" className="font-display text-xl tracking-tight whitespace-nowrap">Casa Lausanne</a>
           <nav className="hidden gap-10 md:flex">
             {[
               ["O Imóvel", "imovel"],
@@ -192,20 +217,28 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden">
-        <img src={fachadaPrincipal.url} alt="Casa Lausanne — fachada principal" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+      <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-foreground">
+        <img
+          src={fachadaPrincipal.url}
+          alt="Casa Lausanne — fachada principal"
+          className="absolute inset-0 h-[120%] w-full object-cover will-change-transform"
+          style={{ transform: `translate3d(0, ${heroY}px, 0)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/10 to-foreground/80" />
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
-          <p className="kicker mb-6 text-sm text-white tracking-[0.22em] font-medium">Condomínio Serra Azul</p>
-          <h1 className="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.95] text-white">
+          <p className="kicker reveal mb-6 text-sm text-background tracking-[0.22em] font-medium" style={{ color: "var(--background)" }}>
+            <span className="inline-block h-px w-10 align-middle mr-3" style={{ background: "var(--gold)" }} />
+            Condomínio Serra Azul · Serra Catarinense
+          </p>
+          <h1 className="font-display reveal text-[clamp(3.5rem,10vw,10rem)] leading-[0.9] text-background">
             Casa<br />
-            <em className="not-italic font-normal italic">Lausanne</em>
+            <em className="italic font-normal" style={{ color: "var(--gold)" }}>Lausanne</em>
           </h1>
-          <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
-            <p className="max-w-md text-base font-light text-white/90 md:text-lg">
+          <div className="mt-10 flex flex-wrap items-end justify-between gap-6 reveal">
+            <p className="max-w-md text-base font-light text-background/85 md:text-lg">
               Arquitetura contemporânea, materiais nobres e uma relação contínua com a paisagem da serra.
             </p>
-            <a href="#imovel" className="kicker text-white/85 transition hover:text-white">
+            <a href="#imovel" className="kicker text-background/85 transition hover:text-background">
               Descer ↓
             </a>
           </div>
@@ -219,7 +252,7 @@ function Index() {
             <p className="kicker text-muted-foreground">01 — O Imóvel</p>
           </div>
           <div className="md:col-span-8">
-            <h2 className="font-display text-4xl leading-tight md:text-6xl">
+            <h2 className="reveal font-display text-4xl leading-tight md:text-6xl">
               Inspirada em <em className="italic">Lausanne</em>, na Suíça — uma das cidades mais encantadoras às margens do Lago Léman.
             </h2>
             <div className="mt-10 max-w-2xl space-y-6 text-base font-light leading-relaxed text-muted-foreground md:text-lg">
