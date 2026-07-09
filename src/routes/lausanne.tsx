@@ -217,20 +217,28 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden">
-        <img src={fachadaPrincipal.url} alt="Casa Lausanne — fachada principal" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+      <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-foreground">
+        <img
+          src={fachadaPrincipal.url}
+          alt="Casa Lausanne — fachada principal"
+          className="absolute inset-0 h-[120%] w-full object-cover will-change-transform"
+          style={{ transform: `translate3d(0, ${heroY}px, 0)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/10 to-foreground/80" />
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
-          <p className="kicker mb-6 text-sm text-white tracking-[0.22em] font-medium">Condomínio Serra Azul</p>
-          <h1 className="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.95] text-white">
+          <p className="kicker reveal mb-6 text-sm text-background tracking-[0.22em] font-medium" style={{ color: "var(--background)" }}>
+            <span className="inline-block h-px w-10 align-middle mr-3" style={{ background: "var(--gold)" }} />
+            Condomínio Serra Azul · Serra Catarinense
+          </p>
+          <h1 className="font-display reveal text-[clamp(3.5rem,10vw,10rem)] leading-[0.9] text-background">
             Casa<br />
-            <em className="not-italic font-normal italic">Lausanne</em>
+            <em className="italic font-normal" style={{ color: "var(--gold)" }}>Lausanne</em>
           </h1>
-          <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
-            <p className="max-w-md text-base font-light text-white/90 md:text-lg">
+          <div className="mt-10 flex flex-wrap items-end justify-between gap-6 reveal">
+            <p className="max-w-md text-base font-light text-background/85 md:text-lg">
               Arquitetura contemporânea, materiais nobres e uma relação contínua com a paisagem da serra.
             </p>
-            <a href="#imovel" className="kicker text-white/85 transition hover:text-white">
+            <a href="#imovel" className="kicker text-background/85 transition hover:text-background">
               Descer ↓
             </a>
           </div>
