@@ -93,8 +93,8 @@ const interiores = [
 const exteriores = [
   { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "" },
   { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "" },
-  { src: areaPiscinaDeck.url, label: "Piscina — Deck", caption: "" },
-  { src: areaPiscinaGourmet.url, label: "Gourmet & Piscina", caption: "" },
+  { src: areaPiscinaDeck.url, label: "Piscina — Deck — Gourmet", caption: "" },
+  { src: patioPiscina.url, label: "Pátio & Piscina", caption: "" },
 ];
 
 const fichaTecnica: { label: string; value: string; unit: string; composicao?: { area: string; item: string }[] }[] = [
