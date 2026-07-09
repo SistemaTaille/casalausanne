@@ -334,9 +334,9 @@ function Index() {
               ].map((item) => (
                 <div key={item.label} className="border-t border-foreground pt-4">
                   <p className="kicker text-muted-foreground">{item.label}</p>
-                  <p className="mt-3 font-display text-3xl md:text-5xl">
+                  <p className="mt-3 font-display text-3xl md:text-4xl">
                     {item.value}
-                    <span className="ml-1 text-xl text-muted-foreground">{item.unit}</span>
+                    <span className="ml-1 text-base text-muted-foreground">{item.unit}</span>
                   </p>
                 </div>
               ))}
