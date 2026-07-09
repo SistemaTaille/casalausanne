@@ -40,7 +40,7 @@ const porDoSolTerreno = { url: "/assets/por-do-sol-terreno.jpg" };
 
 const plantas = [
   { src: plantaTerreo.url, label: "Pavimento Térreo", caption: "Living, cozinha gourmet, área de piscina e garagem" },
-  { src: plantaSuperior.url, label: "Pavimento Superior", caption: "Quatro suítes amplas com varandas e closets" },
+  { src: plantaSuperior.url, label: "Pavimento Superior", caption: "Três suítes amplas com varandas e closets" },
 ];
 
 export const Route = createFileRoute("/lausanne")({
