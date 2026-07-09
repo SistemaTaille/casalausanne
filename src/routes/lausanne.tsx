@@ -31,7 +31,7 @@ const extLateralJardim = { url: "/assets/ext-lateral-jardim.jpg" };
 const extVolumetriaChamine = { url: "/assets/ext-volumetria-chamine.jpg" };
 
 const areaPiscinaDeck = { url: "/assets/area-piscina-deck.jpg" };
-const areaPiscinaGourmet = { url: "/assets/area-piscina-gourmet.jpg" };
+import patioPiscina from "@/assets/patio-piscina.jpg.asset.json";
 
 const plantaTerreo = { url: "/assets/planta-terreo-v4.jpg" };
 const livingSocialTv = { url: "/assets/living-social-tv.jpg" };
