@@ -222,7 +222,7 @@ function Index() {
         <img
           src={fachadaPrincipal.url}
           alt="Fachada principal da Casa Lausanne"
-          className="absolute inset-0 h-full w-full object-cover md:object-contain object-[center_30%] md:object-center will-change-transform"
+          className="absolute inset-0 h-[108%] w-full object-cover object-[center_35%] will-change-transform"
           style={{ transform: `translate3d(0, ${heroY * 0.4}px, 0)` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/10 to-foreground/80" />
