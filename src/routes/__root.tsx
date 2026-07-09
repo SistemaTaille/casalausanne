@@ -77,6 +77,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#ffffff" },
+      { name: "color-scheme", content: "light" },
       { name: "author", content: "Casa Lausanne" },
       { name: "twitter:site", content: "@CasaLausanne" },
       { title: "Casa Lausanne — Construção de alto padrão" },
