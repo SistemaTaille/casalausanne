@@ -482,7 +482,12 @@ function Index() {
           <div className="md:col-span-8">
             <div className="grid gap-px bg-border md:grid-cols-2">
               {diferenciais.map((d, i) => (
-                <article key={d.titulo} className="bg-background p-8 md:p-10">
+                <article
+                  key={d.titulo}
+                  className={`bg-background p-8 md:p-10 ${
+                    i === diferenciais.length - 1 && diferenciais.length % 2 === 1 ? "md:col-span-2" : ""
+                  }`}
+                >
                   <span className="kicker text-muted-foreground">0{i + 1}</span>
                   <h3 className="mt-6 font-display text-2xl md:text-3xl">{d.titulo}</h3>
                   <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground md:text-base">
