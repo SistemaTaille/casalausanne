@@ -219,13 +219,49 @@ function Index() {
 
       {/* Hero */}
       <section id="topo" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-foreground">
-        <img
-          src={fachadaPrincipal.url}
-          alt="Casa Lausanne — fachada principal"
+        <video
+          ref={heroVideoRef}
+          src={heroVideo.url}
+          poster={fachadaPrincipal.url}
+          autoPlay
+          loop
+          muted={heroMuted}
+          playsInline
           className="absolute inset-0 h-[120%] w-full object-cover will-change-transform"
           style={{ transform: `translate3d(0, ${heroY}px, 0)` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/10 to-foreground/80" />
+
+        {/* Sound toggle — discreto, canto superior direito abaixo do header */}
+        <button
+          type="button"
+          onClick={() => {
+            const v = heroVideoRef.current;
+            if (!v) return;
+            const next = !heroMuted;
+            v.muted = next;
+            if (!next) v.play().catch(() => {});
+            setHeroMuted(next);
+          }}
+          aria-label={heroMuted ? "Ativar som" : "Desativar som"}
+          className="group absolute right-6 top-24 z-20 flex h-11 w-11 items-center justify-center border border-background/40 bg-foreground/30 text-background backdrop-blur-md transition hover:border-background/80 hover:bg-foreground/50 md:right-12"
+          style={{ color: heroMuted ? "var(--background)" : "var(--gold)" }}
+        >
+          {heroMuted ? (
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M11 5 6 9H2v6h4l5 4z" />
+              <line x1="22" y1="9" x2="16" y2="15" />
+              <line x1="16" y1="9" x2="22" y2="15" />
+            </svg>
+          ) : (
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M11 5 6 9H2v6h4l5 4z" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+            </svg>
+          )}
+        </button>
+
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
           <h1 className="font-display reveal text-[clamp(3.5rem,10vw,10rem)] leading-[0.9] text-background">
             Casa<br />
