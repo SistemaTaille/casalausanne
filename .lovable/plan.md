@@ -1,17 +1,23 @@
-## Problema
+## Objetivo
+Mostrar mais da fachada na imagem inicial da `/lausanne`, reduzindo a sensação de zoom/crop.
 
-No celular (Samsung Internet / Chrome Android com "modo escuro" ativado), o navegador inverte automaticamente as cores do site, deixando o fundo preto e o texto branco. O `color-scheme: light` atual não é suficiente — precisa ser `only light` para instruir o navegador a não aplicar auto-dark.
+## Por que está com "zoom" hoje
+- A seção hero ocupa a altura toda da tela (`h-screen min-h-[700px]`).
+- A imagem usa `object-cover` com altura `120%` (para dar espaço ao parallax).
+- Com `object-cover`, a foto é ampliada até preencher toda a área — cortando parte da fachada.
 
-## Alterações
+## Mudança proposta (mínima)
+Ajustar apenas o `<img>` do hero em `src/routes/lausanne.tsx` (linha ~222):
 
-**1. `src/routes/__root.tsx`**
-- Trocar `{ name: "color-scheme", content: "light" }` por `{ name: "color-scheme", content: "only light" }`
-- Manter `theme-color: #ffffff`
+1. Trocar `object-cover` por `object-contain` **em telas grandes** (mantendo `object-cover` no mobile para não deixar tarjas grandes).
+2. Reduzir a altura extra da imagem de `h-[120%]` para `h-full`, já que sem crop o parallax fica sutil.
+3. Ajustar `object-position` para "center bottom" para privilegiar a fachada.
+4. Reduzir levemente a intensidade do parallax (`heroY`) para acompanhar.
+5. Manter o gradiente escuro por cima para o texto continuar legível.
 
-**2. `src/styles.css`**
-- Adicionar no bloco `html, body` (ou `:root`): `color-scheme: only light;`
-- Isso reforça a instrução via CSS além do meta tag, cobrindo navegadores que respeitam apenas uma das fontes.
+Resultado esperado: a fachada aparece inteira no desktop, sem cortes laterais, e o texto "Casa Lausanne" continua sobreposto embaixo como está hoje. No mobile o comportamento atual (cover) é preservado para evitar tarjas grandes.
 
-## Resultado esperado
+## Alternativa (se preferir manter cover)
+Manter `object-cover` mas usar `object-position: center 30%` e diminuir `h-[120%]` para `h-[105%]`. Isso reduz o crop mas não elimina — mostra ~15-20% mais da foto sem tarjas.
 
-Ao abrir no celular com modo escuro do sistema/navegador, o site continuará com fundo claro e tipografia original, igual ao desktop.
+Se quiser, posso implementar a opção 1 (mais fiel ao pedido "menos zoom") ou a alternativa (sem tarjas). Aprovando o plano eu sigo com a opção 1.
