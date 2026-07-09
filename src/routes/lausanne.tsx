@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useEffect, useState } from "react";
 import { useEffect, useRef, useState } from "react";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import heroVideo from "@/assets/hero-fachada.mp4.asset.json";
