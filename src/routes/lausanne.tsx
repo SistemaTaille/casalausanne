@@ -192,7 +192,7 @@ function Index() {
         }`}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12">
-          <a href="#topo" className="font-display text-xl tracking-tight">Casa Lausanne</a>
+          <a href="#topo" className="font-display text-xl tracking-tight whitespace-nowrap">Casa Lausanne</a>
           <nav className="hidden gap-10 md:flex">
             {[
               ["O Imóvel", "imovel"],
