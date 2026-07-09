@@ -395,7 +395,7 @@ function Index() {
                 <em className="italic">Ambientes</em>
               </h2>
             </div>
-            <p className="hidden text-sm text-muted-foreground md:block">{interiores.length} imagens</p>
+            
           </div>
           <p className="mb-12 max-w-3xl text-sm font-light italic leading-relaxed text-muted-foreground md:text-base">
             As imagens internas são ilustrativas e têm o objetivo de demonstrar possibilidades de ambientação.
