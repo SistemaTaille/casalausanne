@@ -48,24 +48,27 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
       {/* Seta Esquerda */}
       <button
         onClick={scrollPrev}
-        className="absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-1/2 md:-translate-x-0 w-12 h-12 md:w-14 md:h-14 rounded-full border border-border bg-background/90 backdrop-blur-md flex items-center justify-center transition hover:bg-background hover:scale-105 active:scale-95"
+        className="group absolute left-0 top-1/2 z-10 -translate-y-1/2 flex h-11 w-14 md:h-12 md:w-16 items-center justify-center border border-foreground/80 bg-background text-foreground transition-all duration-300 hover:bg-foreground hover:text-background"
         aria-label="Imagem anterior"
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground">
-          <path d="m15 18-6-6 6-6" />
+        <svg width="28" height="10" viewBox="0 0 28 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="square">
+          <path d="M5 1 L1 5 L5 9" />
+          <path d="M1 5 H27" />
         </svg>
       </button>
 
       {/* Seta Direita */}
       <button
         onClick={scrollNext}
-        className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-1/2 md:translate-x-0 w-12 h-12 md:w-14 md:h-14 rounded-full border border-border bg-background/90 backdrop-blur-md flex items-center justify-center transition hover:bg-background hover:scale-105 active:scale-95"
+        className="group absolute right-0 top-1/2 z-10 -translate-y-1/2 flex h-11 w-14 md:h-12 md:w-16 items-center justify-center border border-foreground/80 bg-background text-foreground transition-all duration-300 hover:bg-foreground hover:text-background"
         aria-label="Próxima imagem"
       >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-foreground">
-          <path d="m9 18 6-6-6-6" />
+        <svg width="28" height="10" viewBox="0 0 28 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="square">
+          <path d="M23 1 L27 5 L23 9" />
+          <path d="M27 5 H1" />
         </svg>
       </button>
+
 
       {/* Viewport */}
       <div className="overflow-hidden px-8 md:px-12" ref={emblaRef}>
