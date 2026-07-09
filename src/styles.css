@@ -27,29 +27,51 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-sans: 'Karla', system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(0.975 0.005 80);
-  --foreground: oklch(0.18 0.005 60);
-  --card: oklch(0.985 0.004 80);
-  --card-foreground: oklch(0.18 0.005 60);
-  --popover: oklch(0.985 0.004 80);
-  --popover-foreground: oklch(0.18 0.005 60);
-  --primary: oklch(0.18 0.005 60);
-  --primary-foreground: oklch(0.975 0.005 80);
-  --secondary: oklch(0.93 0.008 70);
-  --secondary-foreground: oklch(0.18 0.005 60);
-  --muted: oklch(0.93 0.008 70);
-  --muted-foreground: oklch(0.45 0.008 60);
-  --accent: oklch(0.55 0.04 60);
-  --accent-foreground: oklch(0.975 0.005 80);
-  --border: oklch(0.88 0.008 70);
-  --input: oklch(0.88 0.008 70);
-  --ring: oklch(0.55 0.04 60);
+
+  /* Base — branco puro + off-white cremoso */
+  --background: oklch(1 0 0);                    /* #ffffff */
+  --foreground: oklch(0.16 0.005 60);            /* #0d0d0d — preto tinta */
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0.005 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0.005 60);
+
+  /* Primary — preto tinta profundo */
+  --primary: oklch(0.16 0.005 60);
+  --primary-foreground: oklch(0.985 0.003 80);
+
+  /* Secondary/Muted — off-white cremoso para faixas de seção */
+  --secondary: oklch(0.975 0.006 80);            /* #faf8f5 */
+  --secondary-foreground: oklch(0.16 0.005 60);
+  --muted: oklch(0.965 0.006 80);
+  --muted-foreground: oklch(0.45 0.006 60);      /* grafite suave */
+
+  /* Accent — dourado fosco (folha de ouro) */
+  --accent: oklch(0.74 0.11 82);                 /* #c9a84c */
+  --accent-foreground: oklch(0.16 0.005 60);
+  --gold: oklch(0.74 0.11 82);
+  --gold-deep: oklch(0.66 0.11 78);              /* #b8933d */
+
+  /* Borders — bege muito claro (hairlines) */
+  --border: oklch(0.92 0.008 75);                /* #e8e4dd */
+  --input: oklch(0.92 0.008 75);
+  --ring: oklch(0.74 0.11 82);
+
+  /* Gradientes e sombras premium */
+  --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+  --gradient-image-overlay: linear-gradient(180deg, transparent 40%, oklch(0.16 0.005 60 / 0.55) 100%);
+  --shadow-soft: 0 1px 2px oklch(0.16 0.005 60 / 0.04);
+  --shadow-elegant: 0 20px 50px -20px oklch(0.16 0.005 60 / 0.15);
+  --shadow-gold: 0 12px 30px -12px oklch(0.74 0.11 82 / 0.35);
 }
 
 @layer base {
@@ -61,6 +83,12 @@
     font-family: var(--font-sans);
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background-color: var(--gold);
+    color: var(--foreground);
   }
 }
 
@@ -76,4 +104,25 @@
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+@utility gold-rule {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--gold);
+  vertical-align: middle;
+}
+
+@utility text-gold {
+  color: var(--gold);
+}
+
+@utility bg-gold {
+  background-color: var(--gold);
+}
+
+@utility border-gold {
+  border-color: var(--gold);
 }
