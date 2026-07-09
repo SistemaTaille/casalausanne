@@ -188,8 +188,8 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground">
       {/* Nav */}
       <header
-        className={`fixed top-0 z-50 w-full transition-all duration-500 ${
-          scrolled ? "bg-background/85 backdrop-blur-md py-4 border-b border-border/60" : "py-8"
+        className={`fixed top-0 z-50 w-full transition-all duration-500 bg-background/85 backdrop-blur-md border-b border-border/60 md:border-transparent ${
+          scrolled ? "py-4 md:bg-background/85 md:border-border/60" : "py-4 md:py-8 md:bg-transparent md:backdrop-blur-none"
         }`}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-12 px-6 md:gap-16 md:px-12">
