@@ -10,32 +10,42 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LausanneRouteImport } from './routes/lausanne'
+import { Route as IndexRouteImport } from './routes/index'
 
 const LausanneRoute = LausanneRouteImport.update({
   id: '/lausanne',
   path: '/lausanne',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
   '/lausanne': typeof LausanneRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
   '/lausanne': typeof LausanneRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
   '/lausanne': typeof LausanneRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/lausanne'
+  fullPaths: '/' | '/lausanne'
   fileRoutesByTo: FileRoutesByTo
-  to: '/lausanne'
-  id: '__root__' | '/lausanne'
+  to: '/' | '/lausanne'
+  id: '__root__' | '/' | '/lausanne'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
   LausanneRoute: typeof LausanneRoute
 }
 
@@ -48,10 +58,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LausanneRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
   LausanneRoute: LausanneRoute,
 }
 export const routeTree = rootRouteImport
