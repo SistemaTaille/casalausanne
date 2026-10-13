@@ -23,7 +23,7 @@ const int0089 = { url: "/assets/interior-0089.jpg" };
 
 const extEntardecer = { url: "/assets/ext-entardecer.jpg" };
 const extFrontalDia = { url: "/assets/ext-frontal-dia.jpg" };
-const extFrontalNoite = { url: "/assets/ext-frontal-noite.jpg" };
+// const extFrontalNoite = { url: "/assets/ext-frontal-noite.jpg" };
 const extFundosNoite = { url: "/assets/ext-fundos-noite.jpg" };
 // const extGaragemDia = { url: "/assets/ext-garagem-dia.jpg" };
 const extLateralJardim = { url: "/assets/ext-lateral-jardim.jpg" };
@@ -73,7 +73,6 @@ const gallery = [
   { src: int0074.url, label: "Bancada de Refeições", caption: "" }, // Iluminação cênica e marcenaria ripada
   { src: int0086.url, label: "Cozinha Integrada", caption: "Vista para piscina e área externa" },
   // Exteriores adicionais
-  { src: extFrontalNoite.url, label: "Fachada Frontal — Noite", caption: "Iluminação cênica integrada à arquitetura" },
   { src: extFundosNoite.url, label: "Fundos — Anoitecer", caption: "Pedra natural, piscina iluminada e jardim tropical" },
   // { src: extGaragemDia.url, label: "Acesso e Garagem", caption: "Pé-direito generoso e marcenaria em madeira no teto" },
   { src: extLateralJardim.url, label: "Lateral — Jardim", caption: "Volumes em concreto sobre o gramado e mata nativa" },
