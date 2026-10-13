@@ -5,7 +5,7 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 
 const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
 // const fachadaFrente = { url: "/assets/fachada-frente.jpg" };
-const fachadaLateral = { url: "/assets/fachada-lateral.jpg" };
+// const fachadaLateral = { url: "/assets/fachada-lateral.jpg" };
 const fundosDia = { url: "/assets/fundos-dia.jpg" };
 const living = { url: "/assets/living.jpg" };
 const piscinaNoite = { url: "/assets/piscina-noite.jpg" };
@@ -21,7 +21,7 @@ const int0086 = { url: "/assets/interior-0086.jpg" };
 const int0087 = { url: "/assets/interior-0087.jpg" };
 const int0089 = { url: "/assets/interior-0089.jpg" };
 
-// const extEntardecer = { url: "/assets/ext-entardecer.jpg" };
+const extEntardecer = { url: "/assets/ext-entardecer.jpg" };
 const extFrontalDia = { url: "/assets/ext-frontal-dia.jpg" };
 // const extFrontalNoite = { url: "/assets/ext-frontal-noite.jpg" };
 const extFundosNoite = { url: "/assets/ext-fundos-noite.jpg" };
@@ -528,7 +528,7 @@ function Index() {
           </div>
           <div className="md:col-span-7">
             <div className="overflow-hidden">
-              <img src={fachadaLateral.url} alt="Vista lateral da Casa Lausanne no condomínio" className="aspect-[4/5] w-full object-cover" />
+              <img src={extEntardecer.url} alt="Casa Lausanne ao entardecer no Condomínio Serra Azul" className="aspect-[4/5] w-full object-cover" />
             </div>
           </div>
         </div>
