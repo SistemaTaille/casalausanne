@@ -8,3 +8,5 @@
 - [x] Republicar o site publicado (casalausanne.lovable.app) com a galeria atualizada
 - [x] Renomear "Fachada Frontal — Dia" para "Fachada Frontal — Entardecer"
 - [x] Republicar o site publicado com o rótulo atualizado
+- [x] Inserir a foto inédita do pôr do sol na seção Exteriores ("Fachada — Pôr do Sol")
+- [x] Republicar o site publicado com a nova foto
