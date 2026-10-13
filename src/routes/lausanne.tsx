@@ -356,8 +356,11 @@ function Index() {
             
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-            {exteriores.map((img) => (
-              <figure key={img.src} className="group">
+            {exteriores.map((img, i) => (
+              <figure
+                key={img.src}
+                className={`group ${i === exteriores.length - 1 && exteriores.length % 2 === 1 ? "md:col-span-2" : ""}`}
+              >
                 <div className="overflow-hidden">
                   <img
                     src={img.src}
