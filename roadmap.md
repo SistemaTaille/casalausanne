@@ -6,3 +6,5 @@
 - [x] Remover a foto "Volumetria" (fachada lateral) da galeria
 - [x] Remover a foto "Fachada Frontal — Noite" da galeria
 - [x] Republicar o site publicado (casalausanne.lovable.app) com a galeria atualizada
+- [x] Renomear "Fachada Frontal — Dia" para "Fachada Frontal — Entardecer"
+- [x] Republicar o site publicado com o rótulo atualizado
