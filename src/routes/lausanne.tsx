@@ -88,8 +88,8 @@ const interiores = [
 ];
 
 const exteriores = [
-  { src: extFrontalDia.url, label: "Fachada Frontal — Entardecer", caption: "" },
-  { src: extFachadaPorDoSol.url, label: "Fachada — Pôr do Sol", caption: "" },
+  { src: extFrontalDia.url, label: "Fachada Frontal", caption: "" },
+  { src: extFachadaPorDoSol.url, label: "Fachada", caption: "" },
   { src: areaPiscinaDeck.url, label: "Piscina — Deck — Gourmet", caption: "" },
   { src: patioPiscina.url, label: "Pátio & Piscina", caption: "" },
 ];

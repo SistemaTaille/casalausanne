@@ -10,3 +10,5 @@
 - [x] Republicar o site publicado com o rótulo atualizado
 - [x] Inserir a foto inédita do pôr do sol na seção Exteriores ("Fachada — Pôr do Sol")
 - [x] Republicar o site publicado com a nova foto
+- [x] Retirar "Entardecer" e "Pôr do Sol" dos rótulos das duas fachadas (agora "Fachada Frontal" e "Fachada")
+- [x] Republicar o site publicado com os rótulos simplificados
