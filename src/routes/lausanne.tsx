@@ -65,7 +65,6 @@ const gallery = [
   { src: fundosDia.url, label: "Fachada Posterior", caption: "Integração com o jardim e área de piscina" },
   { src: living.url, label: "Living Pé-direito Duplo", caption: "Ampla lareira e pé-direito duplo" },
   { src: piscinaNoite.url, label: "Piscina — Anoitecer", caption: "Iluminação cênica e revestimento em pastilhas" },
-  { src: fachadaLateral.url, label: "Volumetria", caption: "Geometria contemporânea" },
   // Interiores adicionais
   { src: int0079.url, label: "Sala de Jantar", caption: "" }, // Mesa em madeira maciça com vista para a piscina
   { src: int0089.url, label: "Jantar — Anoitecer", caption: "" }, // Pendente escultural e parede em mármore
