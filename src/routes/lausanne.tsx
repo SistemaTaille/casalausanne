@@ -22,6 +22,7 @@ const int0087 = { url: "/assets/interior-0087.jpg" };
 const int0089 = { url: "/assets/interior-0089.jpg" };
 
 const extEntardecer = { url: "/assets/ext-entardecer.jpg" };
+const extFachadaPorDoSol = { url: "/assets/ext-fachada-por-do-sol.jpg" };
 const extFrontalDia = { url: "/assets/ext-frontal-dia.jpg" };
 // const extFrontalNoite = { url: "/assets/ext-frontal-noite.jpg" };
 const extFundosNoite = { url: "/assets/ext-fundos-noite.jpg" };
@@ -88,6 +89,7 @@ const interiores = [
 
 const exteriores = [
   { src: extFrontalDia.url, label: "Fachada Frontal — Entardecer", caption: "" },
+  { src: extFachadaPorDoSol.url, label: "Fachada — Pôr do Sol", caption: "" },
   { src: areaPiscinaDeck.url, label: "Piscina — Deck — Gourmet", caption: "" },
   { src: patioPiscina.url, label: "Pátio & Piscina", caption: "" },
 ];
