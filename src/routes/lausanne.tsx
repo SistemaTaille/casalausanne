@@ -21,7 +21,7 @@ const int0086 = { url: "/assets/interior-0086.jpg" };
 const int0087 = { url: "/assets/interior-0087.jpg" };
 const int0089 = { url: "/assets/interior-0089.jpg" };
 
-const extEntardecer = { url: "/assets/ext-entardecer.jpg" };
+// const extEntardecer = { url: "/assets/ext-entardecer.jpg" };
 const extFrontalDia = { url: "/assets/ext-frontal-dia.jpg" };
 // const extFrontalNoite = { url: "/assets/ext-frontal-noite.jpg" };
 const extFundosNoite = { url: "/assets/ext-fundos-noite.jpg" };
@@ -87,7 +87,6 @@ const interiores = [
 ];
 
 const exteriores = [
-  { src: extEntardecer.url, label: "Volumetria — Entardecer", caption: "" },
   { src: extFrontalDia.url, label: "Fachada Frontal — Dia", caption: "" },
   { src: areaPiscinaDeck.url, label: "Piscina — Deck — Gourmet", caption: "" },
   { src: patioPiscina.url, label: "Pátio & Piscina", caption: "" },
@@ -357,8 +356,11 @@ function Index() {
             
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-            {exteriores.map((img) => (
-              <figure key={img.src} className="group">
+            {exteriores.map((img, i) => (
+              <figure
+                key={img.src}
+                className={`group ${i === exteriores.length - 1 && exteriores.length % 2 === 1 ? "md:col-span-2" : ""}`}
+              >
                 <div className="overflow-hidden">
                   <img
                     src={img.src}
