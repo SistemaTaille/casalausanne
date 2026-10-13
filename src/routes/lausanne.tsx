@@ -28,7 +28,7 @@ const extFundosNoite = { url: "/assets/ext-fundos-noite.jpg" };
 // const extGaragemDia = { url: "/assets/ext-garagem-dia.jpg" };
 const extLateralJardim = { url: "/assets/ext-lateral-jardim.jpg" };
 // const extLateralMadeira = { url: "/assets/ext-lateral-madeira.jpg" };
-const extVolumetriaChamine = { url: "/assets/ext-volumetria-chamine.jpg" };
+// const extVolumetriaChamine = { url: "/assets/ext-volumetria-chamine.jpg" };
 
 const areaPiscinaDeck = { url: "/assets/area-piscina-deck.jpg" };
 const patioPiscina = { url: "/assets/patio-piscina.jpeg" };
@@ -79,7 +79,6 @@ const gallery = [
   // { src: extGaragemDia.url, label: "Acesso e Garagem", caption: "Pé-direito generoso e marcenaria em madeira no teto" },
   { src: extLateralJardim.url, label: "Lateral — Jardim", caption: "Volumes em concreto sobre o gramado e mata nativa" },
   // { src: extLateralMadeira.url, label: "Lateral — Painel em Madeira", caption: "Brises ripados e jardineiras suspensas" },
-  { src: extVolumetriaChamine.url, label: "Volumetria — Chaminé", caption: "Geometria contemporânea com janelas em fita" },
 ];
 
 const interiores = [
