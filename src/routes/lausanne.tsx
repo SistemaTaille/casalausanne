@@ -33,9 +33,9 @@ const extVolumetriaChamine = { url: "/assets/ext-volumetria-chamine.jpg" };
 const areaPiscinaDeck = { url: "/assets/area-piscina-deck.jpg" };
 const patioPiscina = { url: "/assets/patio-piscina.jpeg" };
 
-const plantaTerreo = { url: "/assets/planta-terreo-v4.jpg" };
+const plantaTerreo = { url: "/assets/planta-terreo-v5.jpg" };
 const livingSocialTv = { url: "/assets/living-social-tv.jpg" };
-const plantaSuperior = { url: "/assets/planta-superior-v2.jpg" };
+const plantaSuperior = { url: "/assets/planta-superior-v3.jpg" };
 const porDoSolTerreno = { url: "/assets/por-do-sol-terreno.jpg" };
 
 const plantas = [
