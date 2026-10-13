@@ -528,7 +528,7 @@ function Index() {
           </div>
           <div className="md:col-span-7">
             <div className="overflow-hidden">
-              <img src={extEntardecer.url} alt="Casa Lausanne ao entardecer no Condomínio Serra Azul" className="aspect-[4/5] w-full object-cover" />
+              <img src={extEntardecer.url} alt="Casa Lausanne ao entardecer no Condomínio Serra Azul" className="aspect-[16/10] w-full object-cover object-[center_60%]" />
             </div>
           </div>
         </div>
