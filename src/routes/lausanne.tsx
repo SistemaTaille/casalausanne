@@ -5,7 +5,7 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 
 const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
 // const fachadaFrente = { url: "/assets/fachada-frente.jpg" };
-const fachadaLateral = { url: "/assets/fachada-lateral.jpg" };
+// const fachadaLateral = { url: "/assets/fachada-lateral.jpg" };
 const fundosDia = { url: "/assets/fundos-dia.jpg" };
 const living = { url: "/assets/living.jpg" };
 const piscinaNoite = { url: "/assets/piscina-noite.jpg" };
