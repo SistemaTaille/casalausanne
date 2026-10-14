@@ -36,7 +36,7 @@ const patioPiscina = { url: "/assets/patio-piscina.jpeg" };
 
 const plantaTerreo = { url: "/assets/planta-terreo-v5.jpg" };
 const livingSocialTv = { url: "/assets/living-social-tv.jpg" };
-const plantaSuperior = { url: "/assets/planta-superior-v3.jpg" };
+const plantaSuperior = { url: "/assets/planta-superior-v4.jpg" };
 const porDoSolTerreno = { url: "/assets/por-do-sol-terreno.jpg" };
 
 const plantas = [
