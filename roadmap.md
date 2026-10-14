@@ -13,3 +13,4 @@
 - [x] Retirar "Entardecer" e "Pôr do Sol" dos rótulos das duas fachadas (agora "Fachada Frontal" e "Fachada")
 - [x] Republicar o site publicado com os rótulos simplificados
 - [x] Substituir a foto "Pátio & Piscina" pela nova foto ao entardecer (quintal, piscina iluminada, espreguiçadeiras e palmeiras) e republicar
+- [x] Substituir a planta do Pavimento Superior pela nova versão enviada (Superior_1-2.pdf) e republicar
