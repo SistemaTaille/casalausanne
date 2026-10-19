@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Substituir a planta térrea pelo PDF Térrea_1.pdf enviado em 19/10/2026 e verificar a ampliação
+- [x] Substituir a planta térrea pelo PDF Térrea_1.pdf enviado em 19/10/2026 e verificar a ampliação
 
 - [x] Trocar a foto "Pátio & Piscina" pela nova imagem ao entardecer
 - [x] Remover a foto "Acesso Principal" da galeria
