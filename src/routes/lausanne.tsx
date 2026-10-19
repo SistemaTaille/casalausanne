@@ -4,7 +4,7 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import plantaTerreo from "@/assets/planta-terrea-atualizada.jpg.asset.json";
 
 
-const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
+export const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
 // const fachadaFrente = { url: "/assets/fachada-frente.jpg" };
 // const fachadaLateral = { url: "/assets/fachada-lateral.jpg" };
 const fundosDia = { url: "/assets/fundos-dia.jpg" };
