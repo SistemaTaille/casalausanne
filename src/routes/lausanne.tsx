@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useRef, useState } from "react";
 import { ImageCarousel } from "@/components/ImageCarousel";
-import plantaTerreo from "@/assets/planta-terrea-atualizada.jpg.asset.json";
+const plantaTerreo = { url: "/assets/planta-terreo-v6.jpg" };
 
 
 export const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
