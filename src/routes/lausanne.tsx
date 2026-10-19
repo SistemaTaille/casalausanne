@@ -1,9 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useRef, useState } from "react";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import plantaTerreo from "@/assets/planta-terrea-atualizada.jpg.asset.json";
 
 
-const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
+export const fachadaPrincipal = { url: "/assets/fachada-principal.jpg" };
 // const fachadaFrente = { url: "/assets/fachada-frente.jpg" };
 // const fachadaLateral = { url: "/assets/fachada-lateral.jpg" };
 const fundosDia = { url: "/assets/fundos-dia.jpg" };
@@ -34,7 +35,6 @@ const extLateralJardim = { url: "/assets/ext-lateral-jardim.jpg" };
 const areaPiscinaDeck = { url: "/assets/area-piscina-deck.jpg" };
 const patioPiscina = { url: "/assets/patio-piscina.jpeg" };
 
-const plantaTerreo = { url: "/assets/planta-terreo-v5.jpg" };
 const livingSocialTv = { url: "/assets/living-social-tv.jpg" };
 const plantaSuperior = { url: "/assets/planta-superior-v4.jpg" };
 const porDoSolTerreno = { url: "/assets/por-do-sol-terreno.jpg" };
@@ -52,9 +52,7 @@ export const Route = createFileRoute("/lausanne")({
       { property: "og:title", content: "Casa Lausanne — Condomínio Serra Azul" },
       { property: "og:description", content: "Residência contemporânea de alto padrão. 290,98 m² construídos, 3 suítes, piscina, automação." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: fachadaPrincipal.url },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: fachadaPrincipal.url },
     ],
     links: [{ rel: "canonical", href: "/lausanne" }],
   }),
