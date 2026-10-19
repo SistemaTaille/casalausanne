@@ -17,3 +17,4 @@
 - [x] Substituir a foto "Pátio & Piscina" pela nova foto ao entardecer (quintal, piscina iluminada, espreguiçadeiras e palmeiras) e republicar
 - [x] Substituir a planta do Pavimento Superior pela nova versão enviada (Superior_1-2.pdf) e republicar
 - [x] Alterar o rótulo da planta térrea de "Escritório 11,45m²" para "Escritório ou Suíte Térrea 11,46m²" e republicar
+- [x] Remover a legenda "Iluminação cênica e revestimento em pastilhas" da foto "Piscina — Anoitecer" na galeria e republicar
