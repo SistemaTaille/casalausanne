@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useRef, useState } from "react";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import { investimento, formatarValor, formatarData } from "@/lib/investimento";
 const plantaTerreo = { url: "/assets/planta-terreo-v6.jpg" };
 
 
@@ -187,9 +188,9 @@ function Index() {
           scrolled ? "py-4 md:bg-background/85 md:backdrop-blur-md md:border-border/60" : "py-4 md:py-8 md:bg-transparent md:backdrop-blur-none"
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-12 px-6 md:gap-16 md:px-12">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-6 px-6 md:px-12">
           <a href="#topo" className="font-display text-xl tracking-tight whitespace-nowrap">Casa Lausanne</a>
-          <nav className="hidden gap-10 md:flex">
+          <nav className="hidden flex-wrap justify-center gap-x-4 gap-y-3 md:flex xl:gap-x-6">
             {[
               ["O Imóvel", "imovel"],
               ["O Terreno", "terreno"],
@@ -199,13 +200,14 @@ function Index() {
               ["Plantas", "plantas"],
               ["Diferenciais", "diferenciais"],
               ["Localização", "localizacao"],
+              ["Investimento", "investimento"],
             ].map(([label, id]) => (
               <a key={id} href={`#${id}`} className="kicker text-foreground/70 transition hover:text-foreground">
                 {label}
               </a>
             ))}
           </nav>
-          <a href="#contato" className="kicker hidden border-b border-foreground pb-1 md:inline-block">
+          <a href="#contato" className="kicker hidden shrink-0 border-b border-foreground pb-1 md:inline-block">
             Agendar Visita
           </a>
         </div>
@@ -531,6 +533,29 @@ function Index() {
               <img src={extEntardecer.url} alt="Casa Lausanne ao entardecer no Condomínio Serra Azul" className="aspect-[16/10] w-full object-cover object-[center_60%]" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Investimento */}
+      <section id="investimento" aria-labelledby="investimento-titulo" className="scroll-mt-24 border-b border-border">
+        <div className="mx-auto grid max-w-[1600px] gap-12 px-6 py-28 md:grid-cols-12 md:px-12 md:py-40">
+          <div className="md:col-span-4">
+            <p className="kicker text-muted-foreground">09 — Investimento</p>
+            <h2 id="investimento-titulo" className="mt-6 font-display text-4xl leading-tight md:text-5xl">Valor do <em className="italic">imóvel</em></h2>
+          </div>
+          <dl className="grid gap-10 md:col-span-8 lg:grid-cols-2 lg:gap-8">
+            {investimento.map((periodo) => (
+              <div key={periodo.valor} className="min-w-0 border-t border-gold pt-6">
+                <dt className="kicker text-muted-foreground">
+                  {"ate" in periodo ? <>Até <time dateTime={periodo.ate}>{formatarData(periodo.ate)}</time></> : <>A partir de <time dateTime={periodo.aPartirDe}>{formatarData(periodo.aPartirDe)}</time></>}
+                </dt>
+                <dd className="mt-5 font-display text-3xl leading-tight tracking-normal md:text-4xl">
+                  <span className="mr-2 text-base text-muted-foreground">R$</span>
+                  <span className="whitespace-nowrap">{formatarValor(periodo.valor)}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

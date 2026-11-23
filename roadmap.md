@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Incluir o tópico 09 — Investimento com valores e datas e verificar no computador e celular
+
 - [x] Substituir a planta térrea pelo PDF Térrea_1.pdf enviado em 19/10/2026 e verificar a ampliação
 
 - [x] Trocar a foto "Pátio & Piscina" pela nova imagem ao entardecer
